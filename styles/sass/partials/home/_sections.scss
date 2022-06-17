@@ -1,5 +1,4 @@
 main.index {
-
     section {
         padding: 200px 0 100px;
     }
@@ -49,7 +48,34 @@ section.sectionBranding {
     }
 
     .textContainer {
-        max-width: 500px;
+        max-width: 400px;
+        text-align: center;
+    }
+}
+
+section.sectionCarousel {
+    .wrapper {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contentContainer {
+        @include flexCol;
+        justify-content: center;
+        align-items: center;
+
+        width: 80%;
+        max-width: 1000px;
+    }
+
+    img {
+        max-width: 300px;
+        border-radius: 50%;
+    }
+
+    p {
+        margin-top: 50px;
         text-align: center;
     }
 }

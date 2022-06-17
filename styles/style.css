@@ -297,6 +297,7 @@ nav {
 
 p {
   font-family: "Open Sans";
+  font-size: 0.7rem;
   font-weight: normal;
   line-height: 1.2rem;
   letter-spacing: 0.015rem;
@@ -441,6 +442,47 @@ section.sectionBranding .contentContainer {
   gap: 5vw;
 }
 section.sectionBranding .textContainer {
-  max-width: 500px;
+  max-width: 400px;
+  text-align: center;
+}
+
+section.sectionCarousel .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.sectionCarousel .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  max-width: 1000px;
+}
+section.sectionCarousel img {
+  max-width: 300px;
+  border-radius: 50%;
+}
+section.sectionCarousel p {
+  margin-top: 50px;
   text-align: center;
 }
