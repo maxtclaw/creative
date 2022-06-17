@@ -1,0 +1,42 @@
+nav {
+
+    text-transform: uppercase;
+    .wrapper, ul {
+        @include flexRow;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wrapper ul:first-of-type li {
+        margin-right: 36px;
+    }
+
+    .wrapper ul:last-of-type li {
+        position: relative;
+        margin-left: 36px;
+
+        &:last-child::after{
+            content: '2';
+            position: absolute;
+            right: -50%;
+            bottom: -25%;
+
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+
+            width: 0.6*$baseFontSize;
+            height: 0.6*$baseFontSize;
+            border-radius: 50%;
+            background-color: $themeGreen;
+
+            font-family: $bodyFont;
+            font-size: 0.5*$baseFontSize;
+            font-weight: bold;
+        }
+    }
+}
+
+nav.index {
+    position: fixed;
+}

@@ -1,3 +1,9 @@
-// Importing partials
+// Importing Global Partials
 @import "./partials/global/setup";
 @import "./partials/global/variables";
+
+@import "./partials/global/mixins";
+@import "./partials/global/base-styles";
+@import "./partials/global/typography";
+
+@import "./partials/global/nav";

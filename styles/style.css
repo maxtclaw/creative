@@ -234,3 +234,131 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+html {
+  font-size: 125%;
+}
+
+h1, h2, h3, h4, nav {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: bold;
+  margin: 0;
+  margin: 50px 0 45px 0;
+}
+
+nav {
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: "Open Sans";
+  font-weight: normal;
+  color: #000000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+nav {
+  text-transform: uppercase;
+}
+nav .wrapper, nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .wrapper ul:first-of-type li {
+  margin-right: 36px;
+}
+nav .wrapper ul:last-of-type li {
+  position: relative;
+  margin-left: 36px;
+}
+nav .wrapper ul:last-of-type li:last-child::after {
+  content: "2";
+  position: absolute;
+  right: -50%;
+  bottom: -25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #C3DAB7;
+  font-family: "Open Sans";
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+nav.index {
+  position: fixed;
+}

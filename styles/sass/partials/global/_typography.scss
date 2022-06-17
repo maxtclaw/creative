@@ -18,3 +18,37 @@
 html {
     font-size: 125%;
 }
+
+h1, h2, h3, h4, nav {
+    font-family: $headingFont;
+    text-transform: uppercase;
+    color: $solidBlack;
+}
+
+h1 {
+    font-size: 1.85 * $baseFontSize;
+    font-weight: bold;
+
+    margin: 0;
+    margin: 50px 0 45px 0;
+}
+
+nav {
+    font-size: 0.7 * $baseFontSize;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: $bodyFont;
+    font-weight: normal;
+    color: $solidBlack;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
