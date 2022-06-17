@@ -375,3 +375,72 @@ header.index {
   background-position: bottom;
   background-size: cover;
 }
+
+main.index section {
+  padding: 200px 0 100px;
+}
+main.index .imageContainer,
+main.index .textContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section.sectionBranding {
+  background-color: #C3DAB7;
+}
+section.sectionBranding .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.sectionBranding .imageContainer {
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.sectionBranding .imageContainer img:first-child {
+  position: absolute;
+  top: -96px;
+  left: -96px;
+}
+section.sectionBranding .imageContainer img:last-child {
+  width: 50vw;
+  max-width: 500px;
+}
+section.sectionBranding .contentContainer {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5vw;
+}
+section.sectionBranding .textContainer {
+  max-width: 500px;
+  text-align: center;
+}
