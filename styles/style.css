@@ -276,6 +276,7 @@ html {
 
 h1, h2, h3, h4, nav {
   font-family: "Montserrat";
+  font-weight: normal;
   text-transform: uppercase;
   color: #000000;
 }
@@ -283,8 +284,9 @@ h1, h2, h3, h4, nav {
 h1 {
   font-size: 1.85rem;
   font-weight: bold;
+  letter-spacing: 0.045rem;
   margin: 0;
-  margin: 50px 0 45px 0;
+  margin: 5vh 0 4vh 0;
 }
 
 nav {
@@ -296,7 +298,8 @@ nav {
 p {
   font-family: "Open Sans";
   font-weight: normal;
-  color: #000000;
+  line-height: 1.2rem;
+  letter-spacing: 0.015rem;
 }
 
 .bold {
@@ -308,6 +311,7 @@ p {
 }
 
 nav {
+  width: 100%;
   text-transform: uppercase;
 }
 nav .wrapper, nav ul {
@@ -360,5 +364,14 @@ nav .wrapper ul:last-of-type li:last-child::after {
 }
 
 nav.index {
-  position: fixed;
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+}
+
+header.index {
+  display: block;
+  height: 95vh;
+  background-image: url("../assets/home-1.jpeg");
+  background-position: bottom;
+  background-size: cover;
 }

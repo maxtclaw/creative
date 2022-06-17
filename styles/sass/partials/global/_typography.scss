@@ -21,6 +21,7 @@ html {
 
 h1, h2, h3, h4, nav {
     font-family: $headingFont;
+    font-weight: normal;
     text-transform: uppercase;
     color: $solidBlack;
 }
@@ -29,8 +30,10 @@ h1 {
     font-size: 1.85 * $baseFontSize;
     font-weight: bold;
 
+    letter-spacing: 0.045 * $baseFontSize;
+
     margin: 0;
-    margin: 50px 0 45px 0;
+    margin: 5vh 0 4vh 0;
 }
 
 nav {
@@ -42,7 +45,9 @@ nav {
 p {
     font-family: $bodyFont;
     font-weight: normal;
-    color: $solidBlack;
+
+    line-height: 1.2 * $baseFontSize;
+    letter-spacing: 0.015 * $baseFontSize;
 }
 
 .bold {

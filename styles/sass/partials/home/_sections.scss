@@ -1,0 +1,55 @@
+main.index {
+
+    section {
+        padding: 200px 0 100px;
+    }
+
+    .imageContainer,
+    .textContainer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+section.sectionBranding {
+    background-color: $themeGreen;
+
+    .wrapper {
+        @include flexCol;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imageContainer {
+        position: relative;
+        margin: 0 auto;
+
+        @include flexCol;
+        align-items: center;
+
+        img:first-child {
+            position: absolute;
+            top: -96px;
+            left: -96px;
+        }
+
+        img:last-child {
+            width: 50vw;
+            max-width: 500px;
+        }
+    }
+
+    .contentContainer {
+        width: 80%;
+
+        @include flexRow;
+        justify-content: center;
+        gap: 5vw;
+
+    }
+
+    .textContainer {
+        max-width: 500px;
+        text-align: center;
+    }
+}

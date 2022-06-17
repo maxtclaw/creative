@@ -1,5 +1,5 @@
 nav {
-
+    width: 100%;
     text-transform: uppercase;
     .wrapper, ul {
         @include flexRow;
@@ -38,5 +38,6 @@ nav {
 }
 
 nav.index {
-    position: fixed;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
 }
