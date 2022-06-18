@@ -1,16 +1,18 @@
 main.index {
     section {
-        padding: 200px 0 100px;
+        padding: 150px 0;
     }
 
     .imageContainer,
     .textContainer {
         padding-top: 50px;
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
     }
 }
 
 section.sectionBranding {
+    padding-top: 200px;
+
     background-color: $themeGreen;
 
     .wrapper {
@@ -28,7 +30,7 @@ section.sectionBranding {
 
         img:first-child {
             position: absolute;
-            top: -96px;
+            top: -64px;
             left: -96px;
         }
 
@@ -60,6 +62,14 @@ section.sectionCarousel {
         align-items: center;
     }
 
+    i {
+        font-size: 1.6 * $baseFontSize;
+
+        &:last-of-type {
+            color: $grey;
+        }
+    }
+
     .contentContainer {
         @include flexCol;
         justify-content: center;
@@ -76,6 +86,56 @@ section.sectionCarousel {
 
     p {
         margin-top: 50px;
+        color: $grey;
         text-align: center;
     }
+}
+
+section.sectionOfferings {
+    @include bgCenterCoverNoRepeat(url("../assets/home-4.jpeg"));
+    
+    .wrapper {
+        width: 45%;
+        margin-left: 50%;
+        margin-right: auto;
+
+        @include flexRow;
+        flex-wrap: wrap;
+        gap: 45px;
+    }
+
+    .contentContainer {
+        flex-basis: calc(50% - 45px);
+        padding-top: 1.6 * $baseFontSize;
+        @include flexRow;
+        justify-content: space-evenly
+    }
+
+    .iconContainer {
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+
+        width: 3.2 * $baseFontSize;
+        height: 3.2 * $baseFontSize;
+        border-radius: 50%;
+        border: 0.1 * $baseFontSize solid $solidBlack;
+
+        i {
+            display: block;
+            font-size: 1.6 * $baseFontSize;
+            text-align: center;
+            width: 3.2 * $baseFontSize;
+            height: 1.6 * $baseFontSize;
+        }
+        
+    }
+
+    .textContainer {
+        padding: 0 0 0 40px;
+        h3 {
+            margin: 0;
+        }
+    }
+
 }

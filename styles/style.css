@@ -373,20 +373,21 @@ header.index {
   display: block;
   height: 95vh;
   background-image: url("../assets/home-1.jpeg");
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main.index section {
-  padding: 200px 0 100px;
+  padding: 150px 0;
 }
 main.index .imageContainer,
 main.index .textContainer {
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 section.sectionBranding {
+  padding-top: 200px;
   background-color: #C3DAB7;
 }
 section.sectionBranding .wrapper {
@@ -420,7 +421,7 @@ section.sectionBranding .imageContainer {
 }
 section.sectionBranding .imageContainer img:first-child {
   position: absolute;
-  top: -96px;
+  top: -64px;
   left: -96px;
 }
 section.sectionBranding .imageContainer img:last-child {
@@ -461,6 +462,12 @@ section.sectionCarousel .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
+section.sectionCarousel i {
+  font-size: 1.6rem;
+}
+section.sectionCarousel i:last-of-type {
+  color: grey;
+}
 section.sectionCarousel .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,5 +491,75 @@ section.sectionCarousel img {
 }
 section.sectionCarousel p {
   margin-top: 50px;
+  color: grey;
   text-align: center;
+}
+
+section.sectionOfferings {
+  background-image: url("../assets/home-4.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.sectionOfferings .wrapper {
+  width: 45%;
+  margin-left: 50%;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 45px;
+}
+section.sectionOfferings .contentContainer {
+  -ms-flex-preferred-size: calc(50% - 45px);
+      flex-basis: calc(50% - 45px);
+  padding-top: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+section.sectionOfferings .iconContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 0.1rem solid #000000;
+}
+section.sectionOfferings .iconContainer i {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 3.2rem;
+  height: 1.6rem;
+}
+section.sectionOfferings .textContainer {
+  padding: 0 0 0 40px;
+}
+section.sectionOfferings .textContainer h3 {
+  margin: 0;
 }
