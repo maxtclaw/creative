@@ -24,6 +24,8 @@ h1, h2, h3, h4, nav {
     font-weight: normal;
     text-transform: uppercase;
     color: $solidBlack;
+
+    margin: 0;
 }
 
 h1 {
@@ -32,8 +34,19 @@ h1 {
 
     letter-spacing: 0.045 * $baseFontSize;
 
-    margin: 0;
     margin: 5vh 0 4vh 0;
+}
+
+h2 {
+    font-size: 1.2 * $baseFontSize;
+}
+
+h3 {
+    font-size: 1 * $baseFontSize;
+}
+
+h4 {
+    font-size: 0.9 * $baseFontSize;
 }
 
 nav {

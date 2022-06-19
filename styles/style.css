@@ -241,7 +241,7 @@ img {
 }
 
 .wrapper {
-  width: 90%;
+  width: 80%;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -279,14 +279,26 @@ h1, h2, h3, h4, nav {
   font-weight: normal;
   text-transform: uppercase;
   color: #000000;
+  margin: 0;
 }
 
 h1 {
   font-size: 1.85rem;
   font-weight: bold;
   letter-spacing: 0.045rem;
-  margin: 0;
   margin: 5vh 0 4vh 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 0.9rem;
 }
 
 nav {
@@ -383,6 +395,7 @@ main.index section {
 }
 main.index .imageContainer,
 main.index .textContainer {
+  display: block;
   padding-top: 50px;
 }
 
@@ -562,4 +575,78 @@ section.sectionOfferings .textContainer {
 }
 section.sectionOfferings .textContainer h3 {
   margin: 0;
+}
+
+section.sectionTeam .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.sectionTeam .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  margin: 75px auto;
+  max-width: 1152px;
+}
+section.sectionTeam .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 40px;
+}
+section.sectionTeam .textContainer:first-of-type {
+  width: 564px;
+  height: 270px;
+  background-color: #F6F6F6;
+}
+section.sectionTeam .textContainer:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 270px;
+  height: 270px;
+}
+section.sectionTeam .imageContainer {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  background-color: #F6F6F6;
 }
