@@ -19,3 +19,15 @@ ul {
     list-style: none;
 }
 
+
+.button {
+    display: inline-block;
+    padding: 20px 35px;
+
+    background-color: $solidWhite;
+    font-family: $headingFont;
+    font-size: 0.7*$baseFontSize;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
