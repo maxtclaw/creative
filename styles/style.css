@@ -419,7 +419,7 @@ footer .wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer h4,
+footer h4 a,
 footer p {
   color: #FFFFFF;
   margin: 0;
