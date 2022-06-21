@@ -359,9 +359,15 @@ nav .wrapper, nav ul {
           align-items: center;
 }
 nav .wrapper ul:first-of-type li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-right: 36px;
 }
 nav .wrapper ul:last-of-type li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
   margin-left: 36px;
 }
@@ -399,7 +405,7 @@ nav.index {
 
 footer {
   background-color: #333333;
-  padding-top: 100px;
+  padding-top: 125px;
 }
 footer .wrapper {
   display: -webkit-box;
@@ -419,6 +425,9 @@ footer p {
   margin: 0;
 }
 footer .divContact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: left;
 }
 footer .divContact .textContainer {
@@ -458,6 +467,9 @@ footer .divRecent p::before {
   margin-left: 0.7rem;
 }
 footer .divWidget {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: right;
 }
 footer .divWidget p {
@@ -509,6 +521,7 @@ footer > .textContainer {
   display: block;
   border-top: 2px solid grey;
   text-align: center;
+  margin-top: 50px;
 }
 
 header.index {
