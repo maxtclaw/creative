@@ -1,6 +1,23 @@
 header.index {
+    position: relative;
     display: block;
     height: 95vh;
 
     @include bgCenterCoverNoRepeat(url("../assets/home-1.jpeg"));
+
+    &::after {
+        content:'';
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+
+        transform: translate(-50%, 50%);
+
+        display: block;
+        z-index: 20;
+
+        height: 160px;
+        width: 1px;
+        background-color: $grey;
+    }
 }

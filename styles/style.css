@@ -257,15 +257,45 @@ ul {
   list-style: none;
 }
 
+input[type=email], input[type=text] {
+  border: none;
+  padding: 10px;
+  font-family: "Open Sans";
+  font-size: 0.7rem;
+}
+
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 10px;
+}
+
 .button {
   display: block;
   padding: 20px 35px;
   background-color: #FFFFFF;
   font-family: "Montserrat";
   font-size: 0.7rem;
-  font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
+}
+.button:hover, .button:focus {
+  background-color: #F6F6F6;
+}
+
+.divisionLine, .borderBottom {
+  border-bottom: 1px solid #808080;
 }
 
 @font-face {
@@ -327,6 +357,14 @@ p {
   letter-spacing: 0.015rem;
 }
 
+.grey {
+  color: #808080;
+}
+
+.darkGrey {
+  color: #646464;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -342,6 +380,7 @@ p {
 nav {
   width: 100%;
   text-transform: uppercase;
+  z-index: 10;
 }
 nav .wrapper, nav ul {
   display: -webkit-box;
@@ -466,17 +505,17 @@ footer .divRecent p::before {
   width: 0.7rem;
   margin-left: 0.7rem;
 }
-footer .divWidget {
+footer .divSubscribe {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: right;
 }
-footer .divWidget p {
+footer .divSubscribe p {
   display: inline-block;
   margin-top: 20px;
 }
-footer .divWidget form {
+footer .divSubscribe form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,46 +530,44 @@ footer .divWidget form {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-footer .divWidget input[type=email] {
-  border: none;
-  padding: 10px;
-  font-family: "Open Sans";
-  font-size: 0.7rem;
-}
-footer .divWidget button {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+footer .divSubscribe button {
   background-color: #C3DAB7;
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
+}
+footer .divSubscribe button:hover {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+}
+footer .divSubscribe button:focus {
+  border: 2px solid orange;
 }
 footer > .textContainer {
-  display: block;
-  border-top: 2px solid grey;
   text-align: center;
-  margin-top: 50px;
+}
+footer > .textContainer h4 {
+  color: #FFFFFF;
 }
 
 header.index {
+  position: relative;
   display: block;
   height: 95vh;
   background-image: url("../assets/home-1.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+header.index::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  display: block;
+  z-index: 20;
+  height: 160px;
+  width: 1px;
+  background-color: #808080;
 }
 
 section {
@@ -625,7 +662,7 @@ section.sectionCarousel i {
   font-size: 1.6rem;
 }
 section.sectionCarousel i:last-of-type {
-  color: grey;
+  color: #808080;
 }
 section.sectionCarousel .contentContainer {
   display: -webkit-box;
@@ -650,7 +687,6 @@ section.sectionCarousel img {
 }
 section.sectionCarousel p {
   margin-top: 50px;
-  color: grey;
   text-align: center;
 }
 
@@ -724,7 +760,21 @@ section.sectionOfferings .textContainer h3 {
 }
 
 section.sectionTeam {
+  position: relative;
   padding-bottom: 25px;
+}
+section.sectionTeam::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: block;
+  z-index: 20;
+  height: 100px;
+  width: 1px;
+  background-color: #808080;
 }
 section.sectionTeam .wrapper {
   display: -webkit-box;
@@ -852,7 +902,6 @@ section.sectionDrop .textContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: grey;
   text-align: center;
 }
 section.sectionDrop p {

@@ -56,7 +56,7 @@ footer {
         }
     }
 
-    .divWidget {
+    .divSubscribe {
         flex: 1;
         text-align: right;
 
@@ -71,34 +71,23 @@ footer {
             align-items: stretch;
         }
 
-        input[type=email] {
-
-            border: none;
-            padding: 10px;
-
-            font-family: $bodyFont;
-            font-size: 0.7 * $baseFontSize;
-        }
-
         button {
-            cursor: pointer;
-
-            @include flexRow;
-            justify-content: center;
-            align-items: center;
-
             background-color: $themeGreen;
-            border: none;
-            padding-left: 10px;
-            padding-right: 10px;
+
+            &:hover {
+                filter: brightness(85%);
+            }
+            &:focus {
+                border: 2px solid orange;
+            }
         }
     }
     
     & > .textContainer {
-        display: block;
-        border-top: 2px solid $grey;
         text-align: center;
-        margin-top: 50px;
+        h4 {
+            color: $solidWhite;
+        }
     }
 
 }

@@ -64,6 +64,14 @@ p {
     letter-spacing: 0.015 * $baseFontSize;
 }
 
+.grey {
+    color: $grey;
+}
+
+.darkGrey {
+    color: $darkGrey;
+}
+
 .bold {
     font-weight: bold;
 }

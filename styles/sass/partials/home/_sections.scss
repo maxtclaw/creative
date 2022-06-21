@@ -86,7 +86,6 @@ section.sectionCarousel {
 
     p {
         margin-top: 50px;
-        color: $grey;
         text-align: center;
     }
 }
@@ -141,8 +140,24 @@ section.sectionOfferings {
 }
 
 section.sectionTeam {
-
+    position: relative;
     padding-bottom: 25px;
+
+    &::before {
+        content: '';
+            position: absolute;
+            left: 50%;
+            top: 0%;
+        
+            transform: translate(-50%);
+        
+            display: block;
+            z-index: 20;
+        
+            height: 100px;
+            width: 1px;
+            background-color: $grey;
+    }
 
     .wrapper {
         @include flexCol;
@@ -218,7 +233,6 @@ section.sectionDrop {
         justify-content: center;
         align-items: center;
 
-        color: $grey;
         text-align: center;
     }
 

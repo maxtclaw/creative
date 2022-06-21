@@ -19,6 +19,22 @@ ul {
     list-style: none;
 }
 
+input[type=email], input[type=text] {
+    border: none;
+    padding: 10px;
+
+    font-family: $bodyFont;
+    font-size: 0.7 * $baseFontSize;
+}
+
+button {
+    @include flexRow;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgba(0,0,0,0);
+    padding: 10px;
+}
 
 .button {
     display: block;
@@ -27,7 +43,14 @@ ul {
     background-color: $solidWhite;
     font-family: $headingFont;
     font-size: 0.7*$baseFontSize;
-    font-weight: bold;
-    text-transform: uppercase;
+
     text-align: center;
+
+    &:hover, &:focus {
+        background-color: $offWhite;
+    }
+}
+
+.divisionLine, .borderBottom {
+    border-bottom: 1px solid $grey;
 }
