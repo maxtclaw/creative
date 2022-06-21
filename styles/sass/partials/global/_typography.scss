@@ -71,3 +71,7 @@ p {
 .uppercase {
     text-transform: uppercase;
 }
+
+.spaced {
+    letter-spacing: 0.5 * $baseFontSize;
+}

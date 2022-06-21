@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -257,7 +258,7 @@ ul {
 }
 
 .button {
-  display: inline-block;
+  display: block;
   padding: 20px 35px;
   background-color: #FFFFFF;
   font-family: "Montserrat";
@@ -334,6 +335,10 @@ p {
   text-transform: uppercase;
 }
 
+.spaced {
+  letter-spacing: 0.5rem;
+}
+
 nav {
   width: 100%;
   text-transform: uppercase;
@@ -390,6 +395,120 @@ nav .wrapper ul:last-of-type li:last-child::after {
 nav.index {
   position: absolute;
   background: rgba(0, 0, 0, 0);
+}
+
+footer {
+  background-color: #333333;
+  padding-top: 100px;
+}
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer h4,
+footer p {
+  color: #FFFFFF;
+  margin: 0;
+}
+footer .divContact {
+  text-align: left;
+}
+footer .divContact .textContainer {
+  padding-bottom: 0;
+}
+footer .iconContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+footer .iconContainer ul li {
+  padding-right: 12px;
+}
+footer .iconContainer ul i {
+  color: #FFFFFF;
+}
+footer .divRecent h4 {
+  text-align: center;
+}
+footer .divRecent * + li {
+  margin-top: 0.5rem;
+}
+footer .divRecent p {
+  text-align: left;
+}
+footer .divRecent p::before {
+  content: "•";
+  display: inline-block;
+  width: 0.7rem;
+  margin-left: 0.7rem;
+}
+footer .divWidget {
+  text-align: right;
+}
+footer .divWidget p {
+  display: inline-block;
+  margin-top: 20px;
+}
+footer .divWidget form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+footer .divWidget input[type=email] {
+  border: none;
+  padding: 10px;
+  font-family: "Open Sans";
+  font-size: 0.7rem;
+}
+footer .divWidget button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #C3DAB7;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+footer > .textContainer {
+  display: block;
+  border-top: 2px solid grey;
+  text-align: center;
 }
 
 header.index {
