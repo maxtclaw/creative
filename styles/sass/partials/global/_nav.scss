@@ -3,6 +3,106 @@ nav {
     text-transform: uppercase;
     z-index: 10;
 
+    label {
+        @include flexCol;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+        
+            &:hover {
+                border-bottom: 1px solid grey;
+            }
+    }
+
+    .hamburgerMenu {
+        position: absolute;
+
+        padding-top: 25px;
+        padding-left: 25px;
+
+        i {
+            font-size: 1.8 * $baseFontSize;
+        }
+
+        input[type=checkbox] {
+            opacity: 0;
+            position: absolute;
+        }
+    }
+
+    input[type=checkbox]:checked ~ .slideoutMenu{
+        left: 0px;
+    }
+
+    .slideoutMenu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+
+        transition: left 0.5s;
+
+        background-color: $offWhite;
+
+        height: 100vh;
+        width: 250px;
+        border-right: 2px solid $offBlack;
+        padding-top: 25px;
+        padding-left: 25px;
+
+        label {
+            display: inline;
+        }
+    }
+
+    .slideoutMenu ul {
+        @include flexCol;
+        align-items: flex-start;
+        margin: 0;
+
+        li {
+            width: 60%;
+            margin-top: 15px;
+        }
+
+        li:last-child {
+            a {
+                position: relative;
+            }
+
+            a::after {
+                content: '2';
+        
+                position: absolute;
+                top: 0.1 * $baseFontSize;
+                right: -25%;
+
+                @include flexRow;
+                justify-content: center;
+                align-items: center;
+        
+                width: 0.6*$baseFontSize;
+                height: 0.6*$baseFontSize;
+                border-radius: 50%;
+                background-color: $themeGreen;
+        
+                font-family: $bodyFont;
+                font-size: 0.5*$baseFontSize;
+                font-weight: bold;
+            }
+        }
+        
+    }
+
+
+
+
+
+
+
+
     .wrapper, ul {
         @include flexRow;
         justify-content: space-between;
