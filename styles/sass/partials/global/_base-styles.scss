@@ -54,3 +54,7 @@ button {
 .divisionLine, .borderBottom {
     border-bottom: 1px solid $grey;
 }
+
+.transparentBG {
+    background: rgba(0, 0, 0, 0);
+}

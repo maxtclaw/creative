@@ -1,0 +1,7 @@
+header.blog {
+    position: relative;
+    display: block;
+    height: 95vh;
+
+    @include bgCenterCoverNoRepeat(url("../assets/blog-1.jpeg"));
+}

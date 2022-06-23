@@ -298,6 +298,10 @@ button {
   border-bottom: 1px solid #808080;
 }
 
+.transparentBG {
+  background: rgba(0, 0, 0, 0);
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.ttf");
@@ -378,6 +382,7 @@ p {
 }
 
 nav {
+  position: absolute;
   width: 100%;
   text-transform: uppercase;
   z-index: 10;
@@ -405,8 +410,8 @@ nav li:hover {
 }
 nav .hamburgerMenu {
   position: absolute;
-  padding-top: 25px;
-  padding-left: 25px;
+  padding-top: 5vh;
+  padding-left: 5vh;
 }
 nav .hamburgerMenu i {
   font-size: 1.8rem;
@@ -428,8 +433,8 @@ nav .slideoutMenu {
   height: 100vh;
   width: 250px;
   border-right: 2px solid #333333;
-  padding-top: 25px;
-  padding-left: 25px;
+  padding-top: 5vh;
+  padding-left: 5vh;
 }
 nav .slideoutMenu label {
   display: inline;
@@ -450,6 +455,11 @@ nav .slideoutMenu ul {
 nav .slideoutMenu ul li {
   width: 60%;
   margin-top: 15px;
+}
+nav .slideoutMenu ul .divisionLine {
+  width: 90%;
+  padding: 8px 0;
+  border-width: 2px;
 }
 nav .slideoutMenu ul li:last-child a {
   position: relative;
@@ -535,8 +545,7 @@ nav .wrapper ul:last-of-type li:last-child::after {
   font-weight: bold;
 }
 
-nav.index {
-  position: absolute;
+nav.index, nav.blog {
   background: rgba(0, 0, 0, 0);
 }
 
@@ -1007,4 +1016,14 @@ section.sectionDrop p {
 }
 section.sectionDrop .imageContainer {
   max-width: 960px;
+}
+
+header.blog {
+  position: relative;
+  display: block;
+  height: 95vh;
+  background-image: url("../assets/blog-1.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
