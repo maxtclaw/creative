@@ -4,4 +4,5 @@ header.blog {
     height: 95vh;
 
     @include bgCenterCoverNoRepeat(url("../assets/blog-1.jpeg"));
+    background-position: top;
 }

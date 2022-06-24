@@ -1,14 +1,3 @@
-section {
-    padding: 150px 0px 100px;
-}
-
-.imageContainer,
-.textContainer {
-    display: block;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 section.sectionBranding {
     padding-top: 200px;
     padding-bottom: 100px;
@@ -32,6 +21,7 @@ section.sectionBranding {
             position: absolute;
             top: -64px;
             left: -96px;
+            z-index: 10;
         }
 
         img:last-child {
@@ -204,7 +194,7 @@ section.sectionTeam {
     }
 }
 
-section.sectionDrop {
+section.sectionDropUs {
     padding: 0;
     background-color: $themeGreen;
 
@@ -242,5 +232,9 @@ section.sectionDrop {
 
     .imageContainer {
         max-width: 960px;
+    }
+
+    img:hover {
+        transform: scale(1);
     }
 }

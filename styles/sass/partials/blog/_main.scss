@@ -1,0 +1,149 @@
+.blog {
+    section {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 2.1 * $baseFontSize;
+        font-weight: bold;
+    }
+    h3 {
+        display: inline-block;
+        
+        font-size: 1.1 * $baseFontSize;
+        font-weight: bold;
+
+        padding-bottom: 12px;
+    }
+
+    .sectionPost {
+        .blogInfo {
+            @include flexRow;
+            justify-content: flex-start;
+            align-items: center;
+    
+            img {
+                border-radius: 50%;
+            }
+    
+    
+    
+            .contentContainer {
+                @include flexRow;
+                justify-content: flex-start;
+                align-items: center;
+    
+                &.userInfo {
+                        margin-right: auto;
+                    }
+                
+                    &.postInfo {
+                        justify-content: flex-end;
+                    }
+    
+    
+                p {
+                    color: grey;
+                }
+    
+                .textContainer {
+                    margin-left: 2 * $baseFontSize;
+    
+                    p {
+                        margin-top: 0.4 * $baseFontSize;
+                        margin-bottom: 0;
+                    }
+                }
+    
+            }
+    
+        }
+    
+        .iconContainer {
+            @include flexRow;
+            font-size: 0.9 * $baseFontSize;
+    
+            * + * {
+                margin-left: 0.8 * $baseFontSize;
+            }
+        }
+    }
+
+    .sectionRelated .contentContainer {
+        @include flexRow;
+        justify-content: center;
+        gap: 30px;
+
+        .imageContainer {
+            padding-top: 36px;
+        }
+    }
+
+    .sectionComments .divComment {
+        padding-top: 36px;
+        width: 100%;
+
+        @include flexRow;
+        align-items: flex-start;
+        .imageContainer {
+            padding: 0;
+            img {
+                transition-property: transform;
+                transition-duration: 0s;
+            }
+        }
+        
+        .textContainer {
+            position: relative;
+            margin-left: 36px;
+            width: 100%;
+            padding: 16px;
+            background-color: $offWhite;
+        }
+
+        h4::before {
+            content: "\25C0";
+            font-size: 48px;
+            color: $offWhite;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(-80%);
+        }
+
+    }
+
+    .sectionLeaveComment {
+
+        form {
+            @include flexRow;;
+            flex-wrap: wrap;
+            gap: 36px;
+        }
+
+        input {
+            margin-top: 40px;
+            flex-basis: calc((100% - 72px) / 3);
+
+        }
+        textarea {
+            min-height: 2 * $baseFontSize;
+            flex-basis: 100%;
+            border: none;
+        }
+
+        input,
+        textarea {
+            border-bottom: 1px solid $grey;
+            opacity: 0.7;
+        }
+
+        .divisionLine {
+            margin-top: 5px;
+        }
+
+    }
+
+
+
+}

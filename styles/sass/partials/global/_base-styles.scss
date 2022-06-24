@@ -1,6 +1,14 @@
+* {
+    transition-property: background-color, filter, border, transform;
+    transition-duration: 0.3s; 
+}
+
 img {
     max-width: 100%;
     display: block;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 .wrapper {
@@ -9,8 +17,19 @@ img {
     margin: 0 auto;
 }
 
+section {
+    padding: 150px 0px 100px;
+}
+
+.imageContainer,
+.textContainer {
+    display: block;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
 a {
-    color: $solidBlack;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -20,6 +39,14 @@ ul {
 }
 
 input[type=email], input[type=text] {
+    border: none;
+    padding: 10px;
+
+    font-family: $bodyFont;
+    font-size: 0.7 * $baseFontSize;
+}
+
+textarea {
     border: none;
     padding: 10px;
 
@@ -55,6 +82,3 @@ button {
     border-bottom: 1px solid $grey;
 }
 
-.transparentBG {
-    background: rgba(0, 0, 0, 0);
-}

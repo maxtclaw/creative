@@ -23,7 +23,6 @@ h1, h2, h3, h4, nav {
     font-family: $headingFont;
     font-weight: normal;
     text-transform: uppercase;
-    color: $solidBlack;
 
     margin: 0;
 }
@@ -74,6 +73,10 @@ p {
 
 .bold {
     font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .uppercase {
