@@ -1,5 +1,8 @@
 nav {
-    position: absolute;
+    &.index, &.blog {
+        position: absolute;
+    }
+    
     width: 100%;
     text-transform: uppercase;
     z-index: 10;
@@ -13,9 +16,9 @@ nav {
     li {
         border-bottom: 1px solid rgba(0, 0, 0, 0);
         
-            &:hover {
-                border-bottom: 1px solid grey;
-            }
+        &:hover, &:focus {
+            border-bottom: 1px solid grey;
+        }
     }
 
     .hamburgerMenu {
@@ -42,6 +45,7 @@ nav {
         position: fixed;
         top: 0;
         left: -250px;
+        z-index: 20;
 
         transition: left 0.5s;
 

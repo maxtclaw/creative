@@ -281,7 +281,8 @@ ul {
   list-style: none;
 }
 
-input[type=email], input[type=text] {
+input[type=email],
+input[type=text] {
   border: none;
   padding: 10px;
   font-family: "Open Sans";
@@ -293,6 +294,38 @@ textarea {
   padding: 10px;
   font-family: "Open Sans";
   font-size: 0.7rem;
+}
+
+.sectionLargeForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 36px;
+}
+.sectionLargeForm input {
+  margin-top: 40px;
+  -ms-flex-preferred-size: calc((100% - 72px) / 3);
+      flex-basis: calc((100% - 72px) / 3);
+}
+.sectionLargeForm textarea {
+  min-height: 2rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  border: none;
+}
+.sectionLargeForm input,
+.sectionLargeForm textarea {
+  border-bottom: 1px solid #808080;
+  opacity: 0.7;
+}
+.sectionLargeForm .divisionLine {
+  margin-top: 5px;
 }
 
 button {
@@ -408,14 +441,16 @@ p {
 }
 
 .spaced {
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.45rem;
 }
 
 nav {
-  position: absolute;
   width: 100%;
   text-transform: uppercase;
   z-index: 10;
+}
+nav.index, nav.blog {
+  position: absolute;
 }
 nav label {
   display: -webkit-box;
@@ -435,7 +470,7 @@ nav label {
 nav li {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
-nav li:hover {
+nav li:hover, nav li:focus {
   border-bottom: 1px solid grey;
 }
 nav .hamburgerMenu {
@@ -457,6 +492,7 @@ nav .slideoutMenu {
   position: fixed;
   top: 0;
   left: -250px;
+  z-index: 20;
   -webkit-transition: left 0.5s;
   transition: left 0.5s;
   background-color: #F6F6F6;
@@ -1184,7 +1220,69 @@ header.blog {
   -webkit-transform: translateX(-80%);
           transform: translateX(-80%);
 }
-.blog .sectionLeaveComment form {
+
+header.contact img {
+  min-height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+header.contact img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+header.contact .textContainer {
+  padding: 0;
+}
+header.contact .divisionLine {
+  position: relative;
+  top: -100px;
+  border: 1px solid #000000;
+  width: 32px;
+}
+header.contact h2 {
+  position: relative;
+  top: -3.1rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+  word-spacing: 9999rem;
+}
+
+main.contact h3 {
+  font-size: 1rem;
+}
+main.contact h4 {
+  font-size: 0.8rem;
+}
+main.contact h3, main.contact h4 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+main.contact section {
+  padding: 50px 0;
+}
+main.contact .sectionContactDetails .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main.contact .sectionContactDetails .wrapper > .textContainer {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-top: 0;
+}
+main.contact .contactInfoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1192,26 +1290,45 @@ header.blog {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 36px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
 }
-.blog .sectionLeaveComment input {
-  margin-top: 40px;
-  -ms-flex-preferred-size: calc((100% - 72px) / 3);
-      flex-basis: calc((100% - 72px) / 3);
+main.contact .contactInfoContainer .contentContainer {
+  -ms-flex-preferred-size: 38%;
+      flex-basis: 38%;
+  padding: 48px 0;
+  padding-left: min(48px, 3vw);
+  padding-right: 12px;
 }
-.blog .sectionLeaveComment textarea {
-  min-height: 2rem;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  border: none;
+main.contact .contactInfoContainer .contentContainer:first-of-type, main.contact .contactInfoContainer .contentContainer:last-of-type {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
 }
-.blog .sectionLeaveComment input,
-.blog .sectionLeaveComment textarea {
-  border-bottom: 1px solid #808080;
-  opacity: 0.7;
+main.contact .contactInfoContainer .contentContainer:not(:first-of-type) {
+  border-left: 2px solid #F6F6F6;
 }
-.blog .sectionLeaveComment .divisionLine {
-  margin-top: 5px;
+main.contact .contactInfoContainer .textContainer {
+  margin-top: 14px;
+  padding: 0;
+}
+main.contact i {
+  font-size: 48px;
+}
+main.contact p {
+  margin: 0;
+}
+main.contact .sectionLargeForm {
+  padding: 0;
+}
+main.contact .sectionLargeForm .imageContainer {
+  padding: 50px 0 0 0;
+}
+main.contact .sectionLargeForm img:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }

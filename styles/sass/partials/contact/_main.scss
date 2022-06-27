@@ -1,0 +1,82 @@
+main.contact {
+
+    h3 {
+        font-size: 1 * $baseFontSize;
+    }
+
+    h4 {
+        font-size: 0.8 * $baseFontSize;
+    }
+
+    h3, h4 {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .sectionContactDetails {
+        .wrapper {
+            @include flexCol;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper > .textContainer {
+            align-self: flex-start;
+            padding-top: 0;
+        }
+    }
+
+    .contactInfoContainer {
+        @include flexRow;
+        justify-content: space-between;
+        gap: 20px;
+
+        .contentContainer {
+            flex-basis: 38%;
+            padding: 48px 0;
+            padding-left: min(48px, 3vw);
+            padding-right: 12px;
+
+            &:first-of-type, &:last-of-type {
+                flex: 1;
+                flex-basis: 31%;
+            }
+
+            &:not(:first-of-type) {
+                border-left: 2px solid $offWhite
+            }
+        }
+
+        .textContainer {
+            margin-top: 14px;
+            padding: 0;
+        }
+    }
+
+    i {
+        font-size: 48px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .sectionLargeForm {
+        padding: 0;
+
+        .imageContainer {
+            padding: 50px 0 0 0;
+        }
+
+        img:hover {
+            transform: scale(1);
+        }
+
+    }
+
+
+}

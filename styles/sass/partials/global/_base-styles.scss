@@ -38,7 +38,8 @@ ul {
     list-style: none;
 }
 
-input[type=email], input[type=text] {
+input[type=email],
+input[type=text] {
     border: none;
     padding: 10px;
 
@@ -52,6 +53,37 @@ textarea {
 
     font-family: $bodyFont;
     font-size: 0.7 * $baseFontSize;
+}
+
+.sectionLargeForm {
+    form {
+        @include flexRow;
+        ;
+        flex-wrap: wrap;
+        gap: 36px;
+    }
+
+    input {
+        margin-top: 40px;
+        flex-basis: calc((100% - 72px) / 3);
+
+    }
+
+    textarea {
+        min-height: 2 * $baseFontSize;
+        flex-basis: 100%;
+        border: none;
+    }
+
+    input,
+    textarea {
+        border-bottom: 1px solid $grey;
+        opacity: 0.7;
+    }
+
+    .divisionLine {
+        margin-top: 5px;
+    }
 }
 
 button {
