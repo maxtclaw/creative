@@ -1,3 +1,4 @@
+// Flex Display Mixins
 @mixin flexRow {
     display: flex;
     flex-direction: row;
@@ -8,9 +9,31 @@
     flex-direction: column;
 }
 
+// Background Image Mixin
 @mixin bgCenterCoverNoRepeat ($url) {
     background-image: $url;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+// Breakpoint Mixin
+@mixin breakpointStyling ($breakpoint) {
+    @if $breakpoint == large {
+        @media only screen and (max-width: $largeBreakpoint){
+            @content;
+        }
+    };
+
+    @if $breakpoint == medium {
+        @media only screen and (max-width: $mediumBreakpoint) {
+            @content;
+        }
+    };
+
+    @if $breakpoint == small {
+        @media only screen and (max-width: $smallBreakpoint) {
+            @content;
+        }
+    };
 }

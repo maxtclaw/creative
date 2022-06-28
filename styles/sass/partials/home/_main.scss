@@ -82,13 +82,19 @@ section.sectionCarousel {
 
 section.sectionOfferings {
     @include bgCenterCoverNoRepeat(url("../assets/home-4.jpeg"));
+    background-position: top right;
+
+    @include flexRow;
+    justify-content: flex-end;
+
     
     .wrapper {
-        width: 45%;
-        margin-left: 50%;
-        margin-right: auto;
+        margin: 0 5%;
+        flex-grow: 1;
+        max-width: 864px;
 
         @include flexRow;
+        justify-content: space-between;
         flex-wrap: wrap;
         gap: 45px;
     }

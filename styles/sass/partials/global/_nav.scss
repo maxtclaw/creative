@@ -21,14 +21,30 @@ nav {
         }
     }
 
+    // Hamburger Menu Styling
     .hamburgerMenu {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: -100px;
 
-        padding-top: 5vh;
-        padding-left: 5vh;
+        @include breakpointStyling(medium) {
+            left: 0;
+        }
+
+        margin-top: 1vh;
+        margin-left: 1vh;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid $grey;
+
+        background-color: rgba(255, 255, 255, 0.5);
 
         i {
             font-size: 1.8 * $baseFontSize;
+        }
+
+        h2 {
+            margin-bottom: 1.25vh;
         }
 
         input[type=checkbox] {
@@ -54,11 +70,15 @@ nav {
         height: 100vh;
         width: 250px;
         border-right: 2px solid $offBlack;
-        padding-top: 5vh;
-        padding-left: 5vh;
+        padding-top: calc(1vh + 20px);
+        padding-left: calc(1vh + 20px);
 
         label {
             display: inline;
+        }
+
+        i {
+            margin-bottom: 5vh;
         }
     }
 
@@ -69,12 +89,12 @@ nav {
 
         li {
             width: 60%;
-            margin-top: 15px;
+            margin-top: 2vh;
         }
 
         .divisionLine {
             width: 80%;
-            padding: 8px 0;
+            padding: 1vh 0;
             border-width: 2px;
         }
 
@@ -107,21 +127,53 @@ nav {
         
     }
 
+    // Standard Nav Bar Styling
+    .wrapper {
+        // position: relative;
+        // top: 0;
+        // @include breakpointStyling(medium) {
+        //     top: -50px;
+        // }
+    }
+
     .wrapper, ul {
         @include flexRow;
         justify-content: space-between;
         align-items: center;
+
+        h1 {
+            @include breakpointStyling(large) {
+                margin: 3vh 0;
+            }
+            @include breakpointStyling(medium) {
+                margin-left: calc(1vh + 64px);
+            }
+        }
+    }
+
+    .wrapper {
+        ul:first-of-type li, 
+        ul:last-of-type li {
+            flex: 1;
+
+            @include breakpointStyling(medium) {
+                display: none;
+            }
+        }
     }
 
     .wrapper ul:first-of-type li {
-        flex: 1;
         margin-right: 36px;
+        @include breakpointStyling(large) {
+            margin-right: 24px;
+        }
     }
 
     .wrapper ul:last-of-type li {
-        flex: 1;
-        position: relative;
         margin-left: 36px;
+        @include breakpointStyling(large) {
+            margin-left: 24px;
+        }
 
         &:last-child::after{
             content: '2';
