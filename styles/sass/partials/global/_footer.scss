@@ -1,10 +1,20 @@
 footer {
+    /*#region GENERAL FOOTER STYLING*/
     background-color: $offBlack;
-    padding-top: 125px;
+    padding-top: 75px;
+    @include breakpointStyling (large) {
+        padding-top: 25px;
+    }
 
     .wrapper {
         @include flexRow;
         justify-content: space-between;
+
+        // Change footer components to a column layout on large breakpoint
+        @include breakpointStyling (large) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     h4 a,
@@ -12,29 +22,39 @@ footer {
         color: $solidWhite;
         margin: 0;
     }
+    /*#endregion GENERAL FOOTER STYLING*/
 
+    
+    // CONTACT DIV STYLING
     .divContact {
         flex: 1;
         text-align: left;
+        @include breakpointStyling (large) {
+            text-align: center;
+        }
+
         .textContainer {
             padding-bottom: 0;
         }
+
+        .iconContainer ul {
+            @include flexRow;
+            justify-content: flex-start;
+            @include breakpointStyling (large) {
+                justify-content: center;
+            }
+            li {
+                margin-right: 0.6 * $baseFontSize;
+            }
+            i {
+                color: $solidWhite;
+            }
+        }
     }
 
-    .iconContainer ul {
-        @include flexRow;
-        justify-content: flex-start;
-        li {
-            margin-right: 0.6 * $baseFontSize;
-        }
-        i {
-            color: $solidWhite;
-        }
-    }
-    
 
+    // RECENT POSTS DIV STYLING
     .divRecent {
-
         h4 {
             text-align: center;
         }
@@ -47,7 +67,7 @@ footer {
             text-align: left;
         }
 
-        // Re-styling bullet points rom: https: //www.w3schools.com/howto/howto_css_bullet_color.asp
+        // Re-styling bullet points, from: https: //www.w3schools.com/howto/howto_css_bullet_color.asp
         p::before {
             content: '\2022';
             display: inline-block;
@@ -56,18 +76,35 @@ footer {
         }
     }
 
+
+    // SUBSCRIBE NOW DIV STYLING
     .divSubscribe {
         flex: 1;
         text-align: right;
+        @include breakpointStyling (large) {
+            text-align: center;
+        }
+
+        .textContainer {
+            padding-bottom: 24px;
+            @include breakpointStyling (large) {
+                padding-top: 0;
+            }
+        }
 
         p {
             display: inline-block;
+            padding-left: 0.6 * $baseFontSize;
             margin-top: 20px;
         }
 
         form {
             @include flexRow;
             justify-content: flex-end;
+            @include breakpointStyling (large) {
+                justify-content: center;
+                padding-bottom: 50px;
+            }
             align-items: stretch;
         }
 
@@ -83,11 +120,13 @@ footer {
         }
     }
     
+    
+    // END OF FOOTER TEXT STYLING
     & > .textContainer {
         text-align: center;
         h4 {
+            padding: 0px 2*$baseFontSize;
             color: $solidWhite;
         }
     }
-
 }

@@ -675,8 +675,15 @@ nav .wrapper ul:last-of-type li:last-child::after {
 }
 
 footer {
+  /*#region GENERAL FOOTER STYLING*/
   background-color: #333333;
-  padding-top: 125px;
+  padding-top: 75px;
+  /*#endregion GENERAL FOOTER STYLING*/
+}
+@media only screen and (max-width: 1000px) {
+  footer {
+    padding-top: 25px;
+  }
 }
 footer .wrapper {
   display: -webkit-box;
@@ -690,6 +697,17 @@ footer .wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media only screen and (max-width: 1000px) {
+  footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 footer h4 a,
 footer p {
   color: #FFFFFF;
@@ -701,10 +719,15 @@ footer .divContact {
           flex: 1;
   text-align: left;
 }
+@media only screen and (max-width: 1000px) {
+  footer .divContact {
+    text-align: center;
+  }
+}
 footer .divContact .textContainer {
   padding-bottom: 0;
 }
-footer .iconContainer ul {
+footer .divContact .iconContainer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,10 +739,17 @@ footer .iconContainer ul {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-footer .iconContainer ul li {
+@media only screen and (max-width: 1000px) {
+  footer .divContact .iconContainer ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+footer .divContact .iconContainer ul li {
   margin-right: 0.6rem;
 }
-footer .iconContainer ul i {
+footer .divContact .iconContainer ul i {
   color: #FFFFFF;
 }
 footer .divRecent h4 {
@@ -743,8 +773,22 @@ footer .divSubscribe {
           flex: 1;
   text-align: right;
 }
+@media only screen and (max-width: 1000px) {
+  footer .divSubscribe {
+    text-align: center;
+  }
+}
+footer .divSubscribe .textContainer {
+  padding-bottom: 24px;
+}
+@media only screen and (max-width: 1000px) {
+  footer .divSubscribe .textContainer {
+    padding-top: 0;
+  }
+}
 footer .divSubscribe p {
   display: inline-block;
+  padding-left: 0.6rem;
   margin-top: 20px;
 }
 footer .divSubscribe form {
@@ -762,6 +806,14 @@ footer .divSubscribe form {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
+@media only screen and (max-width: 1000px) {
+  footer .divSubscribe form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 50px;
+  }
+}
 footer .divSubscribe button {
   background-color: #C3DAB7;
 }
@@ -776,6 +828,7 @@ footer > .textContainer {
   text-align: center;
 }
 footer > .textContainer h4 {
+  padding: 0px 2rem;
   color: #FFFFFF;
 }
 
