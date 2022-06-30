@@ -1,246 +1,247 @@
-section.sectionBranding {
-    padding-top: 200px;
-    padding-bottom: 100px;
-
-    background-color: $themeGreen;
-
-    .wrapper {
-        @include flexCol;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .imageContainer {
-        position: relative;
-        margin: 0 auto;
-
-        @include flexCol;
-        align-items: center;
-
-        img:first-child {
-            position: absolute;
-            top: -64px;
-            left: -96px;
-            z-index: 10;
-        }
-
-        img:last-child {
-            width: 50vw;
-            max-width: 500px;
-        }
-    }
-
-    .contentContainer {
-        width: 80%;
-
-        @include flexRow;
-        justify-content: center;
-        gap: 5vw;
-
-    }
-
-    .textContainer {
-        max-width: 400px;
-        text-align: center;
-    }
-}
-
-section.sectionCarousel {
-    .wrapper {
-        @include flexRow;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    i {
-        font-size: 1.6 * $baseFontSize;
-
-        &:last-of-type {
-            color: $grey;
-        }
-    }
-
-    .contentContainer {
-        @include flexCol;
-        justify-content: center;
-        align-items: center;
-
-        width: 80%;
-        max-width: 1000px;
-    }
-
-    img {
-        max-width: 300px;
-        border-radius: 50%;
-    }
-
-    p {
-        margin-top: 50px;
-        text-align: center;
-    }
-}
-
-section.sectionOfferings {
-    @include bgCenterCoverNoRepeat(url("../assets/home-4.jpeg"));
-    background-position: top right;
-
-    @include flexRow;
-    justify-content: flex-end;
-
+main.index {
+    section.sectionBranding {
+        padding-top: 200px;
+        padding-bottom: 100px;
     
-    .wrapper {
-        margin: 0 5%;
-        flex-grow: 1;
-        max-width: 864px;
-
-        @include flexRow;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 45px;
-    }
-
-    .contentContainer {
-        flex-basis: calc(50% - 45px);
-        padding-top: 1.6 * $baseFontSize;
-        @include flexRow;
-        justify-content: space-evenly
-    }
-
-    .iconContainer {
-        @include flexRow;
-        justify-content: center;
-        align-items: center;
-
-        width: 3.2 * $baseFontSize;
-        height: 3.2 * $baseFontSize;
-        border-radius: 50%;
-        border: 0.1 * $baseFontSize solid $solidBlack;
-
-        i {
-            display: block;
-            font-size: 1.6 * $baseFontSize;
+        background-color: $themeGreen;
+    
+        .wrapper {
+            @include flexCol;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .imageContainer {
+            position: relative;
+            margin: 0 auto;
+    
+            @include flexCol;
+            align-items: center;
+    
+            img:first-child {
+                position: absolute;
+                top: -64px;
+                left: -96px;
+                z-index: 10;
+            }
+    
+            img:last-child {
+                width: 50vw;
+                max-width: 500px;
+            }
+        }
+    
+        .contentContainer {
+            width: 80%;
+    
+            @include flexRow;
+            justify-content: center;
+            gap: 5vw;
+    
+        }
+    
+        .textContainer {
+            max-width: 400px;
             text-align: center;
-            width: 3.2 * $baseFontSize;
-            height: 1.6 * $baseFontSize;
-        }
-        
-    }
-
-    .textContainer {
-        padding: 0 0 0 40px;
-
-        h3 {
-            margin: 0;
         }
     }
-}
-
-section.sectionTeam {
-    position: relative;
-    padding-bottom: 25px;
-
-    &::before {
-        content: '';
-            position: absolute;
-            left: 50%;
-            top: 0%;
-        
-            transform: translate(-50%);
-        
-            display: block;
-            z-index: 20;
-        
-            height: 100px;
-            width: 1px;
-            background-color: $grey;
+    
+    section.sectionCarousel {
+        .wrapper {
+            @include flexRow;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        i {
+            font-size: 1.6 * $baseFontSize;
+    
+            &:last-of-type {
+                color: $grey;
+            }
+        }
+    
+        .contentContainer {
+            @include flexCol;
+            justify-content: center;
+            align-items: center;
+    
+            width: 80%;
+            max-width: 1000px;
+        }
+    
+        img {
+            max-width: 300px;
+            border-radius: 50%;
+        }
+    
+        p {
+            margin-top: 50px;
+            text-align: center;
+        }
     }
-
-    .wrapper {
-        @include flexCol;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .contentContainer {
+    
+    section.sectionOfferings {
+        @include bgCenterCoverNoRepeat(url("../assets/home-4.jpeg"));
+        background-position: top right;
+    
         @include flexRow;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 24px;
-
-        margin: 75px auto;
-
-        max-width: 1152px;
-    }
-
-    .textContainer {
-        @include flexCol;
         justify-content: flex-end;
-
-        padding: 40px;
-    }
-
-    .textContainer:first-of-type {
-        width: 564px;
-        height: 270px;
-        background-color: $offWhite;
-    }
-
-    .textContainer:last-of-type {
-        @include flexRow;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 270px;
-        height: 270px;
-    }
-
-    .imageContainer {
-        flex-basis: calc(25%);
-        background-color: $offWhite;
-    }
-}
-
-section.sectionDropUs {
-    padding: 0;
-    background-color: $themeGreen;
-
-    @include flexRow;
-    justify-content: center;
-
-    .wrapper {
-        width: 100%;
-
-        @include flexRow;
-        justify-content: center;
-        align-items: center;
         
-        & > * {
-            flex-basis: 50%;
-            padding: 0;
+        .wrapper {
+            margin: 0 5%;
+            flex-grow: 1;
+            max-width: 864px;
+    
+            @include flexRow;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 45px;
+        }
+    
+        .contentContainer {
+            flex-basis: calc(50% - 45px);
+            padding-top: 1.6 * $baseFontSize;
+            @include flexRow;
+            justify-content: space-evenly
+        }
+    
+        .iconContainer {
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+    
+            width: 3.2 * $baseFontSize;
+            height: 3.2 * $baseFontSize;
+            border-radius: 50%;
+            border: 0.1 * $baseFontSize solid $solidBlack;
+    
+            i {
+                display: block;
+                font-size: 1.6 * $baseFontSize;
+                text-align: center;
+                width: 3.2 * $baseFontSize;
+                height: 1.6 * $baseFontSize;
+            }
+            
+        }
+    
+        .textContainer {
+            padding: 0 0 0 40px;
+    
+            h3 {
+                margin: 0;
+            }
         }
     }
     
-    .textContainer {
-        max-width: 50%;
-        padding: 50px;
-        margin-left: auto;
+    section.sectionTeam {
+        position: relative;
+        padding-bottom: 25px;
     
-        @include flexCol;
+        &::before {
+            content: '';
+                position: absolute;
+                left: 50%;
+                top: 0%;
+            
+                transform: translate(-50%);
+            
+                display: block;
+                z-index: 20;
+            
+                height: 100px;
+                width: 1px;
+                background-color: $grey;
+        }
+    
+        .wrapper {
+            @include flexCol;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .contentContainer {
+            @include flexRow;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+    
+            margin: 75px auto;
+    
+            max-width: 1152px;
+        }
+    
+        .textContainer {
+            @include flexCol;
+            justify-content: flex-end;
+    
+            padding: 40px;
+        }
+    
+        .textContainer:first-of-type {
+            width: 564px;
+            height: 270px;
+            background-color: $offWhite;
+        }
+    
+        .textContainer:last-of-type {
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 270px;
+            height: 270px;
+        }
+    
+        .imageContainer {
+            flex-basis: calc(25%);
+            background-color: $offWhite;
+        }
+    }
+    
+    section.sectionDropUs {
+        padding: 0;
+        background-color: $themeGreen;
+    
+        @include flexRow;
         justify-content: center;
-        align-items: center;
-
-        text-align: center;
-    }
-
-    p {
-        margin-bottom: 25px 0;
-    }
-
-    .imageContainer {
-        max-width: 960px;
-    }
-
-    img:hover {
-        transform: scale(1);
+    
+        .wrapper {
+            width: 100%;
+    
+            @include flexRow;
+            justify-content: center;
+            align-items: center;
+            
+            & > * {
+                flex-basis: 50%;
+                padding: 0;
+            }
+        }
+        
+        .textContainer {
+            max-width: 50%;
+            padding: 50px;
+            margin-left: auto;
+        
+            @include flexCol;
+            justify-content: center;
+            align-items: center;
+    
+            text-align: center;
+        }
+    
+        p {
+            margin-bottom: 25px 0;
+        }
+    
+        .imageContainer {
+            max-width: 960px;
+        }
+    
+        img:hover {
+            transform: none;
+        }
     }
 }

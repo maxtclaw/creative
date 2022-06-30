@@ -17,7 +17,7 @@ main.contact {
         padding: 50px 0;
     }
 
-    .sectionContactDetails {
+    section.sectionContactDetails {
         .wrapper {
             @include flexCol;
             justify-content: center;
@@ -65,7 +65,7 @@ main.contact {
         margin: 0;
     }
 
-    .sectionLargeForm {
+    section.sectionLargeForm {
         padding: 0;
 
         .imageContainer {
@@ -73,7 +73,7 @@ main.contact {
         }
 
         img:hover {
-            transform: scale(1);
+            transform: none;
         }
 
     }

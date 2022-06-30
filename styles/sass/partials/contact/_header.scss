@@ -1,11 +1,12 @@
 header.contact {
-
     img {
+        position:relative;
+        z-index: -10;
         min-height: 100px;
         object-fit: cover;
         object-position: left;
         &:hover {
-            transform: scale(1);
+            transform: none;
         }
     }
 
@@ -15,6 +16,7 @@ header.contact {
 
     .divisionLine {
         position: relative;
+        z-index: -10;
         top: -100px;
 
         border: 1px solid $solidBlack;
@@ -25,10 +27,10 @@ header.contact {
         position: relative;
         top: -3.1 * $baseFontSize;
 
+        z-index: -10;
+
         font-size: 2.1 * $baseFontSize;
         font-weight: bold;
         word-spacing: 9999rem;
-
     }
-
 }

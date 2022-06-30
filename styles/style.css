@@ -452,7 +452,10 @@ p {
 nav {
   width: 100%;
   text-transform: uppercase;
-  z-index: 10;
+  z-index: 30;
+}
+nav.contact {
+  position: relative;
 }
 nav.index, nav.blog {
   position: absolute;
@@ -510,13 +513,13 @@ nav input[type=checkbox]:checked ~ .slideoutMenu {
 nav .slideoutMenu {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -320px;
   z-index: 20;
   -webkit-transition: left 0.5s;
   transition: left 0.5s;
   background-color: #F6F6F6;
   height: 100vh;
-  width: 250px;
+  width: 320px;
   border-right: 2px solid #333333;
   padding-top: calc(1vh + 20px);
   padding-left: calc(1vh + 20px);
@@ -786,12 +789,12 @@ header.index::after {
   background-color: #808080;
 }
 
-section.sectionBranding {
+main.index section.sectionBranding {
   padding-top: 200px;
   padding-bottom: 100px;
   background-color: #C3DAB7;
 }
-section.sectionBranding .wrapper {
+main.index section.sectionBranding .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -806,7 +809,7 @@ section.sectionBranding .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-section.sectionBranding .imageContainer {
+main.index section.sectionBranding .imageContainer {
   position: relative;
   margin: 0 auto;
   display: -webkit-box;
@@ -820,17 +823,17 @@ section.sectionBranding .imageContainer {
       -ms-flex-align: center;
           align-items: center;
 }
-section.sectionBranding .imageContainer img:first-child {
+main.index section.sectionBranding .imageContainer img:first-child {
   position: absolute;
   top: -64px;
   left: -96px;
   z-index: 10;
 }
-section.sectionBranding .imageContainer img:last-child {
+main.index section.sectionBranding .imageContainer img:last-child {
   width: 50vw;
   max-width: 500px;
 }
-section.sectionBranding .contentContainer {
+main.index section.sectionBranding .contentContainer {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -844,12 +847,11 @@ section.sectionBranding .contentContainer {
           justify-content: center;
   gap: 5vw;
 }
-section.sectionBranding .textContainer {
+main.index section.sectionBranding .textContainer {
   max-width: 400px;
   text-align: center;
 }
-
-section.sectionCarousel .wrapper {
+main.index section.sectionCarousel .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -864,13 +866,13 @@ section.sectionCarousel .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-section.sectionCarousel i {
+main.index section.sectionCarousel i {
   font-size: 1.6rem;
 }
-section.sectionCarousel i:last-of-type {
+main.index section.sectionCarousel i:last-of-type {
   color: #808080;
 }
-section.sectionCarousel .contentContainer {
+main.index section.sectionCarousel .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -887,16 +889,15 @@ section.sectionCarousel .contentContainer {
   width: 80%;
   max-width: 1000px;
 }
-section.sectionCarousel img {
+main.index section.sectionCarousel img {
   max-width: 300px;
   border-radius: 50%;
 }
-section.sectionCarousel p {
+main.index section.sectionCarousel p {
   margin-top: 50px;
   text-align: center;
 }
-
-section.sectionOfferings {
+main.index section.sectionOfferings {
   background-image: url("../assets/home-4.jpeg");
   background-position: center;
   background-size: cover;
@@ -913,7 +914,7 @@ section.sectionOfferings {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-section.sectionOfferings .wrapper {
+main.index section.sectionOfferings .wrapper {
   margin: 0 5%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -933,7 +934,7 @@ section.sectionOfferings .wrapper {
       flex-wrap: wrap;
   gap: 45px;
 }
-section.sectionOfferings .contentContainer {
+main.index section.sectionOfferings .contentContainer {
   -ms-flex-preferred-size: calc(50% - 45px);
       flex-basis: calc(50% - 45px);
   padding-top: 1.6rem;
@@ -948,7 +949,7 @@ section.sectionOfferings .contentContainer {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-section.sectionOfferings .iconContainer {
+main.index section.sectionOfferings .iconContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -967,25 +968,24 @@ section.sectionOfferings .iconContainer {
   border-radius: 50%;
   border: 0.1rem solid #000000;
 }
-section.sectionOfferings .iconContainer i {
+main.index section.sectionOfferings .iconContainer i {
   display: block;
   font-size: 1.6rem;
   text-align: center;
   width: 3.2rem;
   height: 1.6rem;
 }
-section.sectionOfferings .textContainer {
+main.index section.sectionOfferings .textContainer {
   padding: 0 0 0 40px;
 }
-section.sectionOfferings .textContainer h3 {
+main.index section.sectionOfferings .textContainer h3 {
   margin: 0;
 }
-
-section.sectionTeam {
+main.index section.sectionTeam {
   position: relative;
   padding-bottom: 25px;
 }
-section.sectionTeam::before {
+main.index section.sectionTeam::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -998,7 +998,7 @@ section.sectionTeam::before {
   width: 1px;
   background-color: #808080;
 }
-section.sectionTeam .wrapper {
+main.index section.sectionTeam .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1013,7 +1013,7 @@ section.sectionTeam .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-section.sectionTeam .contentContainer {
+main.index section.sectionTeam .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1030,7 +1030,7 @@ section.sectionTeam .contentContainer {
   margin: 75px auto;
   max-width: 1152px;
 }
-section.sectionTeam .textContainer {
+main.index section.sectionTeam .textContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1043,12 +1043,12 @@ section.sectionTeam .textContainer {
           justify-content: flex-end;
   padding: 40px;
 }
-section.sectionTeam .textContainer:first-of-type {
+main.index section.sectionTeam .textContainer:first-of-type {
   width: 564px;
   height: 270px;
   background-color: #F6F6F6;
 }
-section.sectionTeam .textContainer:last-of-type {
+main.index section.sectionTeam .textContainer:last-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1066,13 +1066,12 @@ section.sectionTeam .textContainer:last-of-type {
   width: 270px;
   height: 270px;
 }
-section.sectionTeam .imageContainer {
+main.index section.sectionTeam .imageContainer {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   background-color: #F6F6F6;
 }
-
-section.sectionDropUs {
+main.index section.sectionDropUs {
   padding: 0;
   background-color: #C3DAB7;
   display: -webkit-box;
@@ -1086,7 +1085,7 @@ section.sectionDropUs {
       -ms-flex-pack: center;
           justify-content: center;
 }
-section.sectionDropUs .wrapper {
+main.index section.sectionDropUs .wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1102,12 +1101,12 @@ section.sectionDropUs .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-section.sectionDropUs .wrapper > * {
+main.index section.sectionDropUs .wrapper > * {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   padding: 0;
 }
-section.sectionDropUs .textContainer {
+main.index section.sectionDropUs .textContainer {
   max-width: 50%;
   padding: 50px;
   margin-left: auto;
@@ -1126,15 +1125,15 @@ section.sectionDropUs .textContainer {
           align-items: center;
   text-align: center;
 }
-section.sectionDropUs p {
+main.index section.sectionDropUs p {
   margin-bottom: 25px 0;
 }
-section.sectionDropUs .imageContainer {
+main.index section.sectionDropUs .imageContainer {
   max-width: 960px;
 }
-section.sectionDropUs img:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+main.index section.sectionDropUs img:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 header.blog {
@@ -1148,20 +1147,20 @@ header.blog {
   background-position: top;
 }
 
-.blog section {
+main.blog section {
   padding: 50px 0;
 }
-.blog h2 {
+main.blog h2 {
   font-size: 2.1rem;
   font-weight: bold;
 }
-.blog h3 {
+main.blog h3 {
   display: inline-block;
   font-size: 1.1rem;
   font-weight: bold;
   padding-bottom: 12px;
 }
-.blog .sectionPost .blogInfo {
+main.blog .sectionPost .blogInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1176,10 +1175,10 @@ header.blog {
       -ms-flex-align: center;
           align-items: center;
 }
-.blog .sectionPost .blogInfo img {
+main.blog .sectionPost .blogInfo img {
   border-radius: 50%;
 }
-.blog .sectionPost .blogInfo .contentContainer {
+main.blog .sectionPost .blogInfo .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1194,25 +1193,25 @@ header.blog {
       -ms-flex-align: center;
           align-items: center;
 }
-.blog .sectionPost .blogInfo .contentContainer.userInfo {
+main.blog .sectionPost .blogInfo .contentContainer.userInfo {
   margin-right: auto;
 }
-.blog .sectionPost .blogInfo .contentContainer.postInfo {
+main.blog .sectionPost .blogInfo .contentContainer.postInfo {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.blog .sectionPost .blogInfo .contentContainer p {
+main.blog .sectionPost .blogInfo .contentContainer p {
   color: grey;
 }
-.blog .sectionPost .blogInfo .contentContainer .textContainer {
+main.blog .sectionPost .blogInfo .contentContainer .textContainer {
   margin-left: 2rem;
 }
-.blog .sectionPost .blogInfo .contentContainer .textContainer p {
+main.blog .sectionPost .blogInfo .contentContainer .textContainer p {
   margin-top: 0.4rem;
   margin-bottom: 0;
 }
-.blog .sectionPost .iconContainer {
+main.blog .sectionPost .iconContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1222,10 +1221,10 @@ header.blog {
           flex-direction: row;
   font-size: 0.9rem;
 }
-.blog .sectionPost .iconContainer * + * {
+main.blog .sectionPost .iconContainer * + * {
   margin-left: 0.8rem;
 }
-.blog .sectionRelated .contentContainer {
+main.blog .sectionRelated .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1238,10 +1237,10 @@ header.blog {
           justify-content: center;
   gap: 30px;
 }
-.blog .sectionRelated .contentContainer .imageContainer {
+main.blog .sectionRelated .contentContainer .imageContainer {
   padding-top: 36px;
 }
-.blog .sectionComments .divComment {
+main.blog .sectionComments .divComment {
   padding-top: 36px;
   width: 100%;
   display: -webkit-box;
@@ -1255,10 +1254,10 @@ header.blog {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.blog .sectionComments .divComment .imageContainer {
+main.blog .sectionComments .divComment .imageContainer {
   padding: 0;
 }
-.blog .sectionComments .divComment .imageContainer img {
+main.blog .sectionComments .divComment .imageContainer img {
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -1266,14 +1265,14 @@ header.blog {
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
 }
-.blog .sectionComments .divComment .textContainer {
+main.blog .sectionComments .divComment .textContainer {
   position: relative;
   margin-left: 36px;
   width: 100%;
   padding: 16px;
   background-color: #F6F6F6;
 }
-.blog .sectionComments .divComment h4::before {
+main.blog .sectionComments .divComment h4::before {
   content: "◀";
   font-size: 48px;
   color: #F6F6F6;
@@ -1285,6 +1284,8 @@ header.blog {
 }
 
 header.contact img {
+  position: relative;
+  z-index: -10;
   min-height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1292,14 +1293,15 @@ header.contact img {
      object-position: left;
 }
 header.contact img:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: none;
+          transform: none;
 }
 header.contact .textContainer {
   padding: 0;
 }
 header.contact .divisionLine {
   position: relative;
+  z-index: -10;
   top: -100px;
   border: 1px solid #000000;
   width: 32px;
@@ -1307,6 +1309,7 @@ header.contact .divisionLine {
 header.contact h2 {
   position: relative;
   top: -3.1rem;
+  z-index: -10;
   font-size: 2.1rem;
   font-weight: bold;
   word-spacing: 9999rem;
@@ -1325,7 +1328,7 @@ main.contact h3, main.contact h4 {
 main.contact section {
   padding: 50px 0;
 }
-main.contact .sectionContactDetails .wrapper {
+main.contact section.sectionContactDetails .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1340,7 +1343,7 @@ main.contact .sectionContactDetails .wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-main.contact .sectionContactDetails .wrapper > .textContainer {
+main.contact section.sectionContactDetails .wrapper > .textContainer {
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding-top: 0;
@@ -1385,13 +1388,13 @@ main.contact i {
 main.contact p {
   margin: 0;
 }
-main.contact .sectionLargeForm {
+main.contact section.sectionLargeForm {
   padding: 0;
 }
-main.contact .sectionLargeForm .imageContainer {
+main.contact section.sectionLargeForm .imageContainer {
   padding: 50px 0 0 0;
 }
-main.contact .sectionLargeForm img:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+main.contact section.sectionLargeForm img:hover {
+  -webkit-transform: none;
+          transform: none;
 }
