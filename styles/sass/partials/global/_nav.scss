@@ -1,12 +1,14 @@
 nav {
+    /*#region GENERAL NAV STYLING*/
+    // >position: absolute; allows for transparency with the header
+    &.index, &.blog {
+        position: absolute;
+    }
+    // >position: relative; allows for footprint and is necessary to declare to avoid z-index issues
     &.contact {
         position: relative;
     }
 
-    &.index, &.blog {
-        position: absolute;
-    }
-    
     width: 100%;
     text-transform: uppercase;
     z-index: 30;
@@ -24,9 +26,13 @@ nav {
             border-bottom: 1px solid grey;
         }
     }
+    /*#endregion GENERAL NAV STYLING*/
 
-    // Hamburger Menu Styling
+
+    /*#region HAMBURGER BUTTON and SLIDEOUT MENU STYLING*/
+    // Hamburger Menu Button
     .hamburgerMenu {
+        // Hide hamburger button offscreen until the breakpoint 
         position: fixed;
         top: 0;
         left: -100px;
@@ -40,6 +46,7 @@ nav {
         padding: 15px;
         border-radius: 10px;
         border: 1px solid $grey;
+        box-shadow: 0px 0px 3px $grey;
 
         background-color: rgba(255, 255, 255, 0.5);
 
@@ -57,10 +64,12 @@ nav {
         }
     }
 
+    // Bring out slideout menu when the input is checked
     input[type=checkbox]:checked ~ .slideoutMenu{
         left: 0px;
     }
 
+    // Slideout Menu Styling
     .slideoutMenu {
         position: fixed;
         top: 0;
@@ -73,7 +82,8 @@ nav {
 
         height: 100vh;
         width: 320px;
-        border-right: 2px solid $offBlack;
+        border-right: 2px solid $grey;
+        box-shadow: 1px 0px 1px $grey;
         padding-top: calc(1vh + 20px);
         padding-left: calc(1vh + 20px);
 
@@ -102,11 +112,13 @@ nav {
             border-width: 2px;
         }
 
+        // Styling for the "Shopping" menu item
         li:last-child {
             a {
                 position: relative;
             }
 
+            // Element for the number after "Shopping"
             a::after {
                 content: '2';
         
@@ -128,10 +140,12 @@ nav {
                 font-weight: bold;
             }
         }
-        
     }
+    /*#endregion HAMBURGER BUTTON and SLIDEOUT MENU STYLING*/
 
-    // Standard Nav Bar Styling
+
+    /*#region STANDARD NAV BAR STYLING*/
+    // Elements are shifted at the large breakpoint, and hidden on the medium breakpoint
     .wrapper, ul {
         @include flexRow;
         justify-content: space-between;
@@ -171,24 +185,30 @@ nav {
             margin-left: 24px;
         }
 
-        &:last-child::after{
-            content: '2';
-            position: absolute;
-            right: -50%;
-            bottom: -25%;
+        &:last-child{
+            position: relative;
 
-            @include flexRow;
-            justify-content: center;
-            align-items: center;
-
-            width: 0.6*$baseFontSize;
-            height: 0.6*$baseFontSize;
-            border-radius: 50%;
-            background-color: $themeGreen;
-
-            font-family: $bodyFont;
-            font-size: 0.5*$baseFontSize;
-            font-weight: bold;
+            // Element for the number next to the shopping bag icon
+            &::after {
+                content: '2';
+                position: absolute;
+                right: -50%;
+                bottom: -25%;
+            
+                @include flexRow;
+                justify-content: center;
+                align-items: center;
+            
+                width: 0.6*$baseFontSize;
+                height: 0.6*$baseFontSize;
+                border-radius: 50%;
+                background-color: $themeGreen;
+            
+                font-family: $bodyFont;
+                font-size: 0.5*$baseFontSize;
+                font-weight: bold;
+            }
         }
     }
+    /*#endregion STANDARD NAV BAR STYLING*/
 }
