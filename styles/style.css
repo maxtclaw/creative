@@ -237,10 +237,10 @@ html {
 }
 
 * {
-  -webkit-transition-property: background-color, border, width, top, left, padding, margin, -webkit-filter, -webkit-transform;
-  transition-property: background-color, border, width, top, left, padding, margin, -webkit-filter, -webkit-transform;
-  transition-property: background-color, filter, border, transform, width, top, left, padding, margin;
-  transition-property: background-color, filter, border, transform, width, top, left, padding, margin, -webkit-filter, -webkit-transform;
+  -webkit-transition-property: background-color, width, height, border, top, left, padding, margin, font-size, -webkit-filter, -webkit-transform;
+  transition-property: background-color, width, height, border, top, left, padding, margin, font-size, -webkit-filter, -webkit-transform;
+  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, font-size;
+  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, font-size, -webkit-filter, -webkit-transform;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -858,13 +858,28 @@ footer > .textContainer h4 {
 }
 
 header.index {
-  position: relative;
-  display: block;
-  height: 95vh;
   background-image: url("../assets/home-1.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  height: 95vh;
+}
+@media only screen and (max-width: 1000px) {
+  header.index {
+    height: 75vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header.index {
+    height: 65vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header.index {
+    height: 55vh;
+  }
 }
 header.index::after {
   content: "";
@@ -875,7 +890,7 @@ header.index::after {
           transform: translate(-50%, 50%);
   display: block;
   z-index: 20;
-  height: 160px;
+  height: 15vw;
   width: 1px;
   background-color: #808080;
 }

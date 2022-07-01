@@ -1,10 +1,21 @@
 header.index {
+    @include bgCenterCoverNoRepeat(url("../assets/home-1.jpeg"));
+    
     position: relative;
     display: block;
     height: 95vh;
 
-    @include bgCenterCoverNoRepeat(url("../assets/home-1.jpeg"));
+    @include breakpointStyling (large) {
+        height: 75vh;
+    }
+    @include breakpointStyling (medium) {
+        height: 65vh;
+    }
+    @include breakpointStyling (small) {
+        height: 55vh;
+    }
 
+    // Styles vertical line for visual flair only
     &::after {
         content:'';
         position: absolute;
@@ -16,7 +27,7 @@ header.index {
         display: block;
         z-index: 20;
 
-        height: 160px;
+        height: 15vw;
         width: 1px;
         background-color: $grey;
     }
