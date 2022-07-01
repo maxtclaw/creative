@@ -1,7 +1,18 @@
 main.index {
+    // Reduce base-style padding on sections
+    section {
+        @include breakpointStyling(medium) {
+            padding: 50px 0px;
+        }
+    }
+
+    // BRANDING SECTION STYLING
     section.sectionBranding {
-        padding-top: 200px;
+        padding-top: 150px;
         padding-bottom: 100px;
+        @include breakpointStyling(medium) {
+            padding-bottom: 25px;
+        }
     
         background-color: $themeGreen;
     
@@ -11,42 +22,77 @@ main.index {
             align-items: center;
         }
     
+        // Styles container for both images
         .imageContainer {
             position: relative;
-            margin: 0 auto;
+            margin: 25px auto;
+            padding: 0;
+            @include breakpointStyling(medium) {
+                margin-left: 32px;
+                margin-right: 32px;
+            }
     
             @include flexCol;
             align-items: center;
     
+            // Styling for image with circular text
             img:first-child {
                 position: absolute;
-                top: -64px;
+                width: auto;
+                top: -80px;
                 left: -96px;
                 z-index: 10;
+    
+                // Adjust size and position on medium breakpoint
+                @include breakpointStyling(medium) {
+                    width: 128px;
+                    top: -32px;
+                    left: -32px;
+                }
             }
     
+            // Styling for rectangular image
             img:last-child {
+                position: static;
                 width: 50vw;
                 max-width: 500px;
+
+                @include breakpointStyling(medium) {
+                    width: 100%;
+                }
             }
         }
     
+        // Styles flex container for both text descriptions
         .contentContainer {
             width: 80%;
     
             @include flexRow;
             justify-content: center;
             gap: 5vw;
-    
+
+            // Change text container arrangement from row to columns on medium breakpoint
+            @include breakpointStyling(medium) {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
         }
     
+        // Styles text container for two text descriptions
         .textContainer {
             max-width: 400px;
             text-align: center;
+            @include breakpointStyling(medium) {
+                width: 100%;
+                padding: 24px 0px;
+            }
         }
     }
     
+    // CAROUSEL SECTION STYLING
     section.sectionCarousel {
+        // Styles .wrapper div containing arrows, image, and paragraph
         .wrapper {
             @include flexRow;
             justify-content: space-between;
@@ -61,6 +107,7 @@ main.index {
             }
         }
     
+        // Styles container for image and paragraph
         .contentContainer {
             @include flexCol;
             justify-content: center;
@@ -71,6 +118,7 @@ main.index {
         }
     
         img {
+            width: 50vw;
             max-width: 300px;
             border-radius: 50%;
         }
@@ -78,9 +126,14 @@ main.index {
         p {
             margin-top: 50px;
             text-align: center;
+            @include breakpointStyling(medium) {
+                margin-top: 25px;
+                font-size: 0.65 * $baseFontSize;
+            }
         }
     }
     
+    // OFFERINGS (ICON AND DESCRIPTIONS) SECTION STYLING
     section.sectionOfferings {
         @include bgCenterCoverNoRepeat(url("../assets/home-4.jpeg"));
         background-position: top right;
@@ -88,6 +141,7 @@ main.index {
         @include flexRow;
         justify-content: flex-end;
         
+        // Styles .wrapper div flex container for each container of icon and description text
         .wrapper {
             margin: 0 5%;
             flex-grow: 1;
@@ -96,16 +150,26 @@ main.index {
             @include flexRow;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 45px;
+            gap: 2.5%;
+            @include breakpointStyling (medium) {
+                gap: 24px;
+            }
         }
     
+        // Styles container for circular icons and description text
         .contentContainer {
-            flex-basis: calc(50% - 45px);
+            flex-basis: calc(50% - 12px);
             padding-top: 1.6 * $baseFontSize;
+            // Make each container take its own row on medium breakpoint
+            @include breakpointStyling (medium) {
+                flex-basis: 100%;
+                padding-top: 0px;
+            }
             @include flexRow;
             justify-content: space-evenly
         }
     
+        // Styles circular icons
         .iconContainer {
             @include flexRow;
             justify-content: center;
@@ -115,6 +179,12 @@ main.index {
             height: 3.2 * $baseFontSize;
             border-radius: 50%;
             border: 0.1 * $baseFontSize solid $solidBlack;
+
+            // Adjust icon size on small breakpoint
+            @include breakpointStyling(small) {
+                width: 2.6 * $baseFontSize;
+                height: 2.6 * $baseFontSize;
+            }
     
             i {
                 display: block;
@@ -122,12 +192,23 @@ main.index {
                 text-align: center;
                 width: 3.2 * $baseFontSize;
                 height: 1.6 * $baseFontSize;
+
+                // Adjust icon size on small breakpoint
+                @include breakpointStyling(small) {
+                    font-size: 1 * $baseFontSize;
+                    width: 2.6 * $baseFontSize;
+                    height: 1 * $baseFontSize;
+                }
             }
             
         }
     
+        // Styles container for description text
         .textContainer {
-            padding: 0 0 0 40px;
+            padding: 0 0 0 36px;
+            @include breakpointStyling(large) {
+                padding-left: 24px;
+            }
     
             h3 {
                 margin: 0;
@@ -135,10 +216,12 @@ main.index {
         }
     }
     
+    // TEAM SECTION IMAGES GALLERY STYLING
     section.sectionTeam {
         position: relative;
         padding-bottom: 25px;
     
+        // Styles vertical line for visual flair only
         &::before {
             content: '';
                 position: absolute;
@@ -150,7 +233,7 @@ main.index {
                 display: block;
                 z-index: 20;
             
-                height: 100px;
+                height: 5vw;
                 width: 1px;
                 background-color: $grey;
         }
@@ -159,47 +242,94 @@ main.index {
             @include flexCol;
             justify-content: center;
             align-items: center;
+            width: 90%;
         }
     
+        // Styles div containing the text containers and image containers
         .contentContainer {
             @include flexRow;
             justify-content: center;
+            align-items: stretch;
             flex-wrap: wrap;
             gap: 24px;
     
             margin: 75px auto;
-    
+            width: 100%;
             max-width: 1152px;
+
+            // Adjust spacing on large breakpoint
+            @include breakpointStyling(large) {
+                gap: 12px;
+                margin: 25px auto;
+            }
         }
     
         .textContainer {
             @include flexCol;
             justify-content: flex-end;
+            white-space: wrap;
+
+            @include breakpointStyling(large) {
+                justify-content: flex-start;
+            }
     
             padding: 40px;
         }
     
+        // Styles container for long team text description
         .textContainer:first-of-type {
             width: 564px;
-            height: 270px;
             background-color: $offWhite;
+
+            // Change first text container to take full width on large breakpoint
+            @include breakpointStyling(large) {
+                display: inline;
+                flex-basis: 100%;
+                padding-bottom: 12px;
+            }
         }
     
+        // Styles container for short text description
         .textContainer:last-of-type {
             @include flexRow;
             justify-content: center;
             align-items: center;
             text-align: center;
             width: 270px;
-            height: 270px;
+
+            // Adjust size so each flex-wrap row contains 3 elements on large breakpoint
+            @include breakpointStyling(large) {
+                flex-basis: calc((100% - 24px) / 3);
+                padding: 12px;
+            }
+
+            h4 {
+                @include breakpointStyling(medium) {
+                    font-size: 0.6 * $baseFontSize;
+                }
+            }
         }
     
+        // Styles container for team member images
         .imageContainer {
-            flex-basis: calc(25%);
+            padding: 0;
             background-color: $offWhite;
+
+            // Adjust size so each flex-wrap row contains 3 elements on large breakpoint
+            @include breakpointStyling(large) {
+                height: fit-content;
+                flex-basis: calc((100% - 24px) / 3);
+            }
+        }
+
+        img {
+            @include breakpointStyling(large) {
+                width: 100%;
+            }
         }
     }
     
+    // DROP US A LINE SECTION STYLING
     section.sectionDropUs {
         padding: 0;
         background-color: $themeGreen;
@@ -213,6 +343,11 @@ main.index {
             @include flexRow;
             justify-content: center;
             align-items: center;
+
+            // Adjust overall layout of section to be visually  in columns (simpler than flex-direction: column;) on medium breakpoint
+            @include breakpointStyling(medium) {
+                display: inline;
+            }
             
             & > * {
                 flex-basis: 50%;
@@ -224,6 +359,12 @@ main.index {
             max-width: 50%;
             padding: 50px;
             margin-left: auto;
+
+            @include breakpointStyling(large) {
+                max-width: 100%;
+                width: 100%;
+                margin-left: 0px;
+            }
         
             @include flexCol;
             justify-content: center;
@@ -237,11 +378,23 @@ main.index {
         }
     
         .imageContainer {
-            max-width: 960px;
+            max-width: 960px;            
+        }
+
+        img {
+            &:hover {
+                transform: none;
+            }
+
+            // Adjust image size when section becomes columnar on medium breakpoint
+            @include breakpointStyling(medium) {
+                object-fit: cover;
+                object-position: top;
+                height: 20vh;
+                width: 100%;
+            }
         }
     
-        img:hover {
-            transform: none;
-        }
+
     }
 }

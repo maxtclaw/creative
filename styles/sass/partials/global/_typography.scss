@@ -34,18 +34,31 @@ h1 {
     letter-spacing: 0.045 * $baseFontSize;
 
     margin: 5vh 0 4vh 0;
+
+    @include breakpointStyling (small) {
+        font-size: 1.7 * $baseFontSize;
+    }
 }
 
 h2 {
     font-size: 1.2 * $baseFontSize;
+    @include breakpointStyling (small) {
+        font-size: 1.1 * $baseFontSize;
+    }
 }
 
 h3 {
     font-size: 1 * $baseFontSize;
+    @include breakpointStyling (small) {
+        font-size: 0.9 * $baseFontSize;
+    }
 }
 
 h4 {
     font-size: 0.9 * $baseFontSize;
+    @include breakpointStyling (small) {
+        font-size: 0.8 * $baseFontSize;
+    }
 }
 
 nav {
@@ -61,6 +74,10 @@ p {
 
     line-height: 1.2 * $baseFontSize;
     letter-spacing: 0.015 * $baseFontSize;
+
+    @include breakpointStyling (small) {
+        font-size: 0.65 * $baseFontSize;
+    }
 }
 
 .grey {

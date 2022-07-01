@@ -23,16 +23,16 @@
         @media only screen and (max-width: $largeBreakpoint){
             @content;
         }
-    };
-
-    @if $breakpoint == medium {
+    } @else if $breakpoint == medium {
         @media only screen and (max-width: $mediumBreakpoint) {
             @content;
         }
-    };
-
-    @if $breakpoint == small {
+    } @else if $breakpoint == small {
         @media only screen and (max-width: $smallBreakpoint) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: $breakpoint) {
             @content;
         }
     };
