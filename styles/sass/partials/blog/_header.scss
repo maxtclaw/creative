@@ -5,4 +5,14 @@ header.blog {
 
     @include bgCenterCoverNoRepeat(url("../assets/blog-1.jpeg"));
     background-position: top;
+
+    @include breakpointStyling (large) {
+        height: 75vh;
+    }
+    @include breakpointStyling (medium) {
+        height: 65vh;
+    }
+    @include breakpointStyling (small) {
+        height: 55vh;
+    }
 }

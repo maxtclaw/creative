@@ -34,10 +34,6 @@ h1 {
     letter-spacing: 0.045 * $baseFontSize;
 
     margin: 5vh 0 4vh 0;
-
-    @include breakpointStyling (small) {
-        font-size: 1.7 * $baseFontSize;
-    }
 }
 
 h2 {
