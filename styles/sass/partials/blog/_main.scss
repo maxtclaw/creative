@@ -1,11 +1,18 @@
 main.blog {
+    /*#region GENERAL STYLING*/
     section {
         padding: 50px 0;
+        @include breakpointStyling(medium) {
+            padding: 25px 0;
+        }
     }
 
     h2 {
         font-size: 2.1 * $baseFontSize;
         font-weight: bold;
+        @include breakpointStyling(medium) {
+            font-size: 1.9 * $baseFontSize;
+        }
     }
     
     h3 {
@@ -16,13 +23,29 @@ main.blog {
 
         padding-bottom: 12px;
     }
+    /*#endregion*/ 
 
-    .sectionPost {
+    // STYLING FOR BLOG POST SECTION
+    section.sectionPost {
+        // Style blog post info (author, date, category, tags)
         .blogInfo {
             @include flexRow;
             justify-content: flex-start;
             align-items: center;
-    
+
+            // Push .postInfo to second row on medium breakpoint
+            @include breakpointStyling(medium) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            // Bring .postInfo back to first row on small breakpoint
+            @include breakpointStyling(small) {
+                flex-direction: row;
+                align-items: center;
+                padding-bottom: 12px;
+            }
+            
             img {
                 border-radius: 50%;
             }
@@ -33,31 +56,70 @@ main.blog {
                 align-items: center;
     
                 &.userInfo {
-                        margin-right: auto;
+                    margin-right: auto;
+                }
+            
+                &.postInfo {
+                    justify-content: flex-start;
+                    // Style .postInfo when on its own row for medium breakpoint
+                    @include breakpointStyling(medium) {
+                        width: 100%;
+                        justify-content: space-between;
+                        h4 {
+                            display: none;
+                        }
                     }
-                
-                    &.postInfo {
-                        justify-content: flex-end;
+                    // Remove h4 and restyle as column on small breakpoint
+                    @include breakpointStyling(small) {
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        width: inherit;
                     }
-    
+                }
     
                 p {
                     color: grey;
                 }
     
                 .textContainer {
-                    margin-left: 2 * $baseFontSize;
+                    margin-left: 1vw;
     
                     p {
                         margin-top: 0.4 * $baseFontSize;
                         margin-bottom: 0;
+                        @include breakpointStyling(small) {
+                            margin-top: 0px;
+                        }
+                    }
+                }
+
+                .imageContainer { 
+                    @include breakpointStyling(450px) {
+                        display: none;
+                    }
+                }
+
+                .textContainer, .imageContainer {
+                    padding: 12px;
+                    @include breakpointStyling(large) {
+                        padding: 6px;
+                    }
+                    @include breakpointStyling(small) {
+                        padding: 0px;
                     }
                 }
     
             }
-    
+        }
+
+        .textContainer {
+            @include breakpointStyling(medium) {
+                padding: 25px 0px;
+            }
         }
     
+        // Style social icons
         .iconContainer {
             @include flexRow;
             font-size: 0.9 * $baseFontSize;
@@ -68,27 +130,77 @@ main.blog {
         }
     }
 
-    .sectionRelated .contentContainer {
+    // STYLING FOR RELATED POSTS IMAGE GALLERY SECTION
+    section.sectionRelated .contentContainer {
         @include flexRow;
         justify-content: center;
-        gap: 30px;
+        gap: 24px;
 
+        // Reduce gaps betwen images on medium breakpoint
+        @include breakpointStyling(medium) {
+            gap: 12px;
+        }
+
+        // Put images in column on small breakpoint
+        @include breakpointStyling(small) {
+            flex-direction: column;
+        }
+
+        // Style section images
         .imageContainer {
-            padding-top: 36px;
+            padding: 24px 0px;
+            @include breakpointStyling(medium) {
+                padding: 12px 0px;
+                p {
+                    margin-top: 6px;
+                }
+            }
+            // Style images and date text for column layout on small breakpoint
+            @include breakpointStyling(small) {
+                padding-bottom: 0px;
+                
+                &:not(:first-of-type) {
+                    padding-top: 0px;
+                }
+                p {
+                    margin-top: 0px;;
+                    margin-bottom: 0px;
+                }
+                img {
+                    height: 30vh;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 
-    .sectionComments .divComment {
-        padding-top: 36px;
-        width: 100%;
-
+    // STYLING FOR USER COMMENTS SECTION
+    section.sectionComments .divComment {
         @include flexRow;
         align-items: flex-start;
+
+        padding-top: 36px;
+        width: 100%;
+        
+        @include breakpointStyling(small) {
+            padding-top: 24px;
+        }
+        @include breakpointStyling(small) {
+            padding-top: 18px;
+        }
+
         .imageContainer {
             padding: 0;
+            
             img {
                 transition-property: transform;
                 transition-duration: 0s;
+            }
+            
+            // Hide commenter image on small breakpoint
+            @include breakpointStyling(small) {
+                display: none;
             }
         }
         
@@ -98,8 +210,12 @@ main.blog {
             width: 100%;
             padding: 16px;
             background-color: $offWhite;
+            @include breakpointStyling(small) {
+                margin: 0px;
+            }
         }
 
+        // Provides triangle shape to style the comment box as a speech bubble  
         h4::before {
             content: "\25C0";
             font-size: 48px;

@@ -1,5 +1,5 @@
 * {
-    transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, font-size;
+    transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, gap, font-size;
     transition-duration: 0.3s; 
 }
 
@@ -62,15 +62,40 @@ textarea {
 .sectionLargeForm {
     form {
         @include flexRow;
-        ;
         flex-wrap: wrap;
         gap: 36px;
+        @include breakpointStyling(medium) {
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        @include breakpointStyling(small) {
+            justify-content: center;
+        }
+
     }
 
     input {
         margin-top: 40px;
         flex-basis: calc((100% - 72px) / 3);
 
+        // Push inputs to two rows on medium breakpoint
+        @include breakpointStyling(medium) {
+            flex-basis: calc((100% - 24px) / 2);
+            margin-top: 20px;
+            &:last-of-type {
+                flex-basis: 100%;
+                margin-top: 0px;
+            }
+        }
+
+        // Push inputs to one input for each row on small breakpoint
+        @include breakpointStyling(small) {
+            flex-basis: 100%;
+            &:not(:first-of-type) {
+                margin-top: 0px;
+            }
+        }        
     }
 
     textarea {

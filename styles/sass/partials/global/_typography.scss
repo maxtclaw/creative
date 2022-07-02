@@ -72,7 +72,7 @@ p {
     letter-spacing: 0.015 * $baseFontSize;
 
     @include breakpointStyling (small) {
-        font-size: 0.65 * $baseFontSize;
+        font-size: 0.6 * $baseFontSize;
     }
 }
 

@@ -237,10 +237,10 @@ html {
 }
 
 * {
-  -webkit-transition-property: background-color, width, height, border, top, left, padding, margin, font-size, -webkit-filter, -webkit-transform;
-  transition-property: background-color, width, height, border, top, left, padding, margin, font-size, -webkit-filter, -webkit-transform;
-  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, font-size;
-  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, font-size, -webkit-filter, -webkit-transform;
+  -webkit-transition-property: background-color, width, height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
+  transition-property: background-color, width, height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
+  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, gap, font-size;
+  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -313,10 +313,46 @@ textarea {
       flex-wrap: wrap;
   gap: 36px;
 }
+@media only screen and (max-width: 768px) {
+  .sectionLargeForm form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 24px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionLargeForm form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .sectionLargeForm input {
   margin-top: 40px;
   -ms-flex-preferred-size: calc((100% - 72px) / 3);
       flex-basis: calc((100% - 72px) / 3);
+}
+@media only screen and (max-width: 768px) {
+  .sectionLargeForm input {
+    -ms-flex-preferred-size: calc((100% - 24px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
+    margin-top: 20px;
+  }
+  .sectionLargeForm input:last-of-type {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sectionLargeForm input {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .sectionLargeForm input:not(:first-of-type) {
+    margin-top: 0px;
+  }
 }
 .sectionLargeForm textarea {
   min-height: 2rem;
@@ -441,7 +477,7 @@ p {
 }
 @media only screen and (max-width: 500px) {
   p {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -1421,12 +1457,26 @@ header.blog {
   }
 }
 
+main.blog {
+  /*#region GENERAL STYLING*/
+  /*#endregion*/
+}
 main.blog section {
   padding: 50px 0;
+}
+@media only screen and (max-width: 768px) {
+  main.blog section {
+    padding: 25px 0;
+  }
 }
 main.blog h2 {
   font-size: 2.1rem;
   font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  main.blog h2 {
+    font-size: 1.9rem;
+  }
 }
 main.blog h3 {
   display: inline-block;
@@ -1434,7 +1484,7 @@ main.blog h3 {
   font-weight: bold;
   padding-bottom: 12px;
 }
-main.blog .sectionPost .blogInfo {
+main.blog section.sectionPost .blogInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1449,10 +1499,33 @@ main.blog .sectionPost .blogInfo {
       -ms-flex-align: center;
           align-items: center;
 }
-main.blog .sectionPost .blogInfo img {
+@media only screen and (max-width: 768px) {
+  main.blog section.sectionPost .blogInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionPost .blogInfo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 12px;
+  }
+}
+main.blog section.sectionPost .blogInfo img {
   border-radius: 50%;
 }
-main.blog .sectionPost .blogInfo .contentContainer {
+main.blog section.sectionPost .blogInfo .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1467,25 +1540,78 @@ main.blog .sectionPost .blogInfo .contentContainer {
       -ms-flex-align: center;
           align-items: center;
 }
-main.blog .sectionPost .blogInfo .contentContainer.userInfo {
+main.blog section.sectionPost .blogInfo .contentContainer.userInfo {
   margin-right: auto;
 }
-main.blog .sectionPost .blogInfo .contentContainer.postInfo {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+main.blog section.sectionPost .blogInfo .contentContainer.postInfo {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
-main.blog .sectionPost .blogInfo .contentContainer p {
+@media only screen and (max-width: 768px) {
+  main.blog section.sectionPost .blogInfo .contentContainer.postInfo {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main.blog section.sectionPost .blogInfo .contentContainer.postInfo h4 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionPost .blogInfo .contentContainer.postInfo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: inherit;
+  }
+}
+main.blog section.sectionPost .blogInfo .contentContainer p {
   color: grey;
 }
-main.blog .sectionPost .blogInfo .contentContainer .textContainer {
-  margin-left: 2rem;
+main.blog section.sectionPost .blogInfo .contentContainer .textContainer {
+  margin-left: 1vw;
 }
-main.blog .sectionPost .blogInfo .contentContainer .textContainer p {
+main.blog section.sectionPost .blogInfo .contentContainer .textContainer p {
   margin-top: 0.4rem;
   margin-bottom: 0;
 }
-main.blog .sectionPost .iconContainer {
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionPost .blogInfo .contentContainer .textContainer p {
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main.blog section.sectionPost .blogInfo .contentContainer .imageContainer {
+    display: none;
+  }
+}
+main.blog section.sectionPost .blogInfo .contentContainer .textContainer, main.blog section.sectionPost .blogInfo .contentContainer .imageContainer {
+  padding: 12px;
+}
+@media only screen and (max-width: 1000px) {
+  main.blog section.sectionPost .blogInfo .contentContainer .textContainer, main.blog section.sectionPost .blogInfo .contentContainer .imageContainer {
+    padding: 6px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionPost .blogInfo .contentContainer .textContainer, main.blog section.sectionPost .blogInfo .contentContainer .imageContainer {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main.blog section.sectionPost .textContainer {
+    padding: 25px 0px;
+  }
+}
+main.blog section.sectionPost .iconContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1495,10 +1621,10 @@ main.blog .sectionPost .iconContainer {
           flex-direction: row;
   font-size: 0.9rem;
 }
-main.blog .sectionPost .iconContainer * + * {
+main.blog section.sectionPost .iconContainer * + * {
   margin-left: 0.8rem;
 }
-main.blog .sectionRelated .contentContainer {
+main.blog section.sectionRelated .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1509,14 +1635,51 @@ main.blog .sectionRelated .contentContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 30px;
+  gap: 24px;
 }
-main.blog .sectionRelated .contentContainer .imageContainer {
-  padding-top: 36px;
+@media only screen and (max-width: 768px) {
+  main.blog section.sectionRelated .contentContainer {
+    gap: 12px;
+  }
 }
-main.blog .sectionComments .divComment {
-  padding-top: 36px;
-  width: 100%;
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionRelated .contentContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+main.blog section.sectionRelated .contentContainer .imageContainer {
+  padding: 24px 0px;
+}
+@media only screen and (max-width: 768px) {
+  main.blog section.sectionRelated .contentContainer .imageContainer {
+    padding: 12px 0px;
+  }
+  main.blog section.sectionRelated .contentContainer .imageContainer p {
+    margin-top: 6px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionRelated .contentContainer .imageContainer {
+    padding-bottom: 0px;
+  }
+  main.blog section.sectionRelated .contentContainer .imageContainer:not(:first-of-type) {
+    padding-top: 0px;
+  }
+  main.blog section.sectionRelated .contentContainer .imageContainer p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  main.blog section.sectionRelated .contentContainer .imageContainer img {
+    height: 30vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+main.blog section.sectionComments .divComment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1527,11 +1690,23 @@ main.blog .sectionComments .divComment {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-top: 36px;
+  width: 100%;
 }
-main.blog .sectionComments .divComment .imageContainer {
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionComments .divComment {
+    padding-top: 24px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionComments .divComment {
+    padding-top: 18px;
+  }
+}
+main.blog section.sectionComments .divComment .imageContainer {
   padding: 0;
 }
-main.blog .sectionComments .divComment .imageContainer img {
+main.blog section.sectionComments .divComment .imageContainer img {
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -1539,14 +1714,24 @@ main.blog .sectionComments .divComment .imageContainer img {
   -webkit-transition-duration: 0s;
           transition-duration: 0s;
 }
-main.blog .sectionComments .divComment .textContainer {
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionComments .divComment .imageContainer {
+    display: none;
+  }
+}
+main.blog section.sectionComments .divComment .textContainer {
   position: relative;
   margin-left: 36px;
   width: 100%;
   padding: 16px;
   background-color: #F6F6F6;
 }
-main.blog .sectionComments .divComment h4::before {
+@media only screen and (max-width: 500px) {
+  main.blog section.sectionComments .divComment .textContainer {
+    margin: 0px;
+  }
+}
+main.blog section.sectionComments .divComment h4::before {
   content: "◀";
   font-size: 48px;
   color: #F6F6F6;
