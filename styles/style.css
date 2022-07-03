@@ -1774,6 +1774,12 @@ header.contact h2 {
   word-spacing: 9999rem;
 }
 
+main.contact {
+  /*#region GENERAL STYLING*/
+  /*#endregion*/
+  /*#region STYLING FOR CONTACT DETAILS SECTION */
+  /*#endregion*/
+}
 main.contact h3 {
   font-size: 1rem;
 }
@@ -1787,6 +1793,15 @@ main.contact h3, main.contact h4 {
 main.contact section {
   padding: 50px 0;
 }
+@media only screen and (max-width: 768px) {
+  main.contact section {
+    padding-top: 25px;
+  }
+}
+main.contact section.sectionContactDetails {
+  padding-top: 0px;
+  padding-bottom: 75px;
+}
 main.contact section.sectionContactDetails .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1798,14 +1813,15 @@ main.contact section.sectionContactDetails .wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 main.contact section.sectionContactDetails .wrapper > .textContainer {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding-top: 0;
+  padding-top: 0px;
+  padding-bottom: 25px;
 }
 main.contact .contactInfoContainer {
   display: -webkit-box;
@@ -1820,12 +1836,41 @@ main.contact .contactInfoContainer {
           justify-content: space-between;
   gap: 20px;
 }
+@media only screen and (max-width: 768px) {
+  main.contact .contactInfoContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0px;
+  }
+}
+main.contact .contactInfoContainer .textContainer {
+  margin-top: 14px;
+  padding: 0px;
+}
 main.contact .contactInfoContainer .contentContainer {
   -ms-flex-preferred-size: 38%;
       flex-basis: 38%;
-  padding: 48px 0;
-  padding-left: min(48px, 3vw);
-  padding-right: 12px;
+  padding: 24px 12px 0px min(48px, 3vw);
+}
+@media only screen and (max-width: 768px) {
+  main.contact .contactInfoContainer .contentContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 0px 0px 25px;
+  }
+  main.contact .contactInfoContainer .contentContainer .textContainer {
+    margin: 16px 24px 12px;
+  }
 }
 main.contact .contactInfoContainer .contentContainer:first-of-type, main.contact .contactInfoContainer .contentContainer:last-of-type {
   -webkit-box-flex: 1;
@@ -1837,12 +1882,20 @@ main.contact .contactInfoContainer .contentContainer:first-of-type, main.contact
 main.contact .contactInfoContainer .contentContainer:not(:first-of-type) {
   border-left: 2px solid #F6F6F6;
 }
-main.contact .contactInfoContainer .textContainer {
-  margin-top: 14px;
-  padding: 0;
+@media only screen and (max-width: 768px) {
+  main.contact .contactInfoContainer .contentContainer:not(:first-of-type) {
+    border-top: 2px solid #F6F6F6;
+    border-left: 0px solid #F6F6F6;
+  }
 }
 main.contact i {
   font-size: 48px;
+  width: 48px;
+}
+@media only screen and (max-width: 768px) {
+  main.contact i {
+    text-align: center;
+  }
 }
 main.contact p {
   margin: 0;

@@ -1,5 +1,6 @@
 main.contact {
 
+    /*#region GENERAL STYLING*/
     h3 {
         font-size: 1 * $baseFontSize;
     }
@@ -15,31 +16,61 @@ main.contact {
 
     section {
         padding: 50px 0;
+        @include breakpointStyling(medium) {
+            padding-top: 25px;
+        }
     }
+    /*#endregion*/
 
+    /*#region STYLING FOR CONTACT DETAILS SECTION */
     section.sectionContactDetails {
+        padding-top: 0px;
+        padding-bottom: 75px;
+
         .wrapper {
             @include flexCol;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
         }
 
         .wrapper > .textContainer {
             align-self: flex-start;
-            padding-top: 0;
+            padding-top: 0px;
+            padding-bottom: 25px;
         }
     }
 
+    // Styles contact info icon and text
     .contactInfoContainer {
         @include flexRow;
         justify-content: space-between;
         gap: 20px;
 
+        // Change layout of icon and text from row to columns
+        @include breakpointStyling(medium){
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .textContainer {
+            margin-top: 14px;
+            padding: 0px;
+        }
+
         .contentContainer {
             flex-basis: 38%;
-            padding: 48px 0;
-            padding-left: min(48px, 3vw);
-            padding-right: 12px;
+            padding: 24px 12px 0px min(48px, 3vw);
+
+            // Adjust spacing for medium breakpoint
+            @include breakpointStyling(medium) {
+                @include flexRow;
+                align-items: center;
+                padding: 0px 0px 0px 25px;
+
+                .textContainer {
+                    margin: 16px 24px 12px;
+                }
+            }
 
             &:first-of-type, &:last-of-type {
                 flex: 1;
@@ -47,24 +78,30 @@ main.contact {
             }
 
             &:not(:first-of-type) {
-                border-left: 2px solid $offWhite
+                border-left: 2px solid $offWhite;
+                // Change vertical division line to horizontal on medium breakpoint
+                @include breakpointStyling(medium) {
+                    border-top: 2px solid $offWhite;
+                    border-left: 0px solid $offWhite;
+                }
             }
-        }
-
-        .textContainer {
-            margin-top: 14px;
-            padding: 0;
         }
     }
 
     i {
         font-size: 48px;
+        width: 48px;
+        @include breakpointStyling(medium) {
+            text-align: center;
+        }
     }
 
     p {
         margin: 0;
     }
+    /*#endregion*/
 
+    // STYLING FOR CONTACT FORM SECTION
     section.sectionLargeForm {
         padding: 0;
 
@@ -77,6 +114,4 @@ main.contact {
         }
 
     }
-
-
 }
