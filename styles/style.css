@@ -276,16 +276,6 @@ section {
   padding-bottom: 48px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
 input[type=email],
 input[type=text] {
   border: none;
@@ -468,6 +458,16 @@ nav {
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 p {
   font-family: "Open Sans";
   font-size: 0.7rem;
@@ -503,6 +503,18 @@ p {
 
 .spaced {
   letter-spacing: 0.45rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px solid #FFFFFF;
+  background-color: #FFFFFF;
+  color: black;
+  z-index: 10;
+}
+.skip-link:focus {
+  left: 0;
 }
 
 nav {

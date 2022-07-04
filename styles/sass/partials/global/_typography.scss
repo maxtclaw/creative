@@ -1,3 +1,4 @@
+// Font Faces
 @font-face {
     font-family: "Montserrat";
     src:url("../fonts/Montserrat-Regular.ttf");
@@ -15,6 +16,7 @@
     src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+// Basic Typographical Styling
 html {
     font-size: 125%;
 }
@@ -63,6 +65,16 @@ nav {
     padding: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
 p {
     font-family: $bodyFont;
     font-size: 0.7 * $baseFontSize;
@@ -76,6 +88,7 @@ p {
     }
 }
 
+// Class Typographical Styling
 .grey {
     color: $grey;
 }

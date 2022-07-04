@@ -1,8 +1,10 @@
+// Transition Styling
 * {
     transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, gap, font-size;
     transition-duration: 0.3s; 
 }
 
+// Base Image Styling
 img {
     max-width: 100%;
     display: block;
@@ -11,6 +13,7 @@ img {
     }
 }
 
+// Container Styling
 .wrapper {
     width: 80%;
     max-width: 1920px;
@@ -32,16 +35,7 @@ section {
     padding-bottom: 48px;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-ul {
-    padding: 0;
-    list-style: none;
-}
-
+// Forms and Form Elements Styling
 input[type=email],
 input[type=text] {
     border: none;
@@ -139,6 +133,7 @@ button {
     }
 }
 
+// Decorative Styling
 .divisionLine, .borderBottom {
     border-bottom: 1px solid $grey;
 }

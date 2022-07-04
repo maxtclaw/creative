@@ -1,0 +1,15 @@
+// SKIP LINK STYLING
+.skip-link {
+    // Move the element off the screen
+    position: absolute;
+    left: -1000px;
+    top: 5px solid $solidWhite;
+    background-color: $solidWhite;
+    color: black;
+    z-index: 10;
+
+    // When element receives focus, bring it back to the screen
+    &:focus {
+        left: 0;
+    }
+}
