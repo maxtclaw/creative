@@ -1,4 +1,4 @@
-// Importing Global Partials
+// Global Partials for all webpages
 @import "./partials/global/setup";
 @import "./partials/global/variables";
 
@@ -6,17 +6,18 @@
 @import "./partials/global/base-styles";
 @import "./partials/global/typography";
 
-@import "./partials/global/nav";
-@import "./partials/global/footer";
+// Global Partials for specific elements
+@import "./partials/global/elements/nav";
+@import "./partials/global/elements/footer";
 
 // Importing Index Partials
-@import "./partials/home/header";
-@import "./partials/home/main";
+@import "./partials/index/index-header";
+@import "./partials/index/index-main";
 
 // Importing Blog Partials
-@import "./partials/blog/header";
-@import "./partials/blog/main";
+@import "./partials/blog/blog-header";
+@import "./partials/blog/blog-main";
 
 // Importing Contact Partials
-@import "./partials/contact/header";
-@import "./partials/contact/main"
+@import "./partials/contact/contact-header";
+@import "./partials/contact/contact-main"
