@@ -9,13 +9,16 @@
     <script src="https://kit.fontawesome.com/9de165e445.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
     <a href="#mainContent" class="skip-link">Skip to main content.</a>
 
     <nav class="index">
         <div class="hamburgerMenu">
             <input type="checkbox" id="hamburgerButton">
-            <label for="hamburgerButton"><i class="fa-solid fa-bars"></i></label>
+            <label for="hamburgerButton">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">Toggle slide-out menu</span>
+            </label>
     
             <div class="slideoutMenu">
                 <label for="hamburgerButton">
