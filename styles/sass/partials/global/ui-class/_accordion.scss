@@ -1,0 +1,12 @@
+.accordionButton {
+    display: block;
+    width: 100%;
+    &:hover {
+        background-color: $offWhite;
+    }
+}
+
+.accordion-container {
+    overflow: hidden;
+    max-height: 100vh;
+}

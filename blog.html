@@ -131,9 +131,10 @@
             </section>
 
             <section class="sectionRelated">
-                <h3>Related Posts</h3>
-                <div class="divisionLine"></div>
-                <div class="contentContainer">
+                <div class="accordionButton divisionLine">
+                    <h3><i class="fa-solid fa-angle-down"></i> Related Posts</h3>
+                </div>
+                <div class="contentContainer accordion-container accordion-container-visible">
                     <div class="imageContainer">
                         <img src="./assets/blog-3.jpeg" alt="Potted plants and a laptop ontop a white desk.">
                         <p class="uppercase">July 25, 2018</p>
@@ -150,34 +151,38 @@
             </section>
 
             <section class="sectionComments">
-                <h3>02 Comments</h3>
-                <div class="divisionLine"></div>
-                <div class="divComment">
-                    <div class="imageContainer">
-                        <img src="./assets/blog-6.jpeg" alt="Portrait image for Daniel Vandaft.">
-                    </div>
-                    <div class="textContainer">
-                        <h4>Daniel Vandaft - <span class="italic grey">Reply</span></h4>
-                        <p>Ecosystem iPad disruptive social media low hanging fruit stealth launch party handshake market branding.</p>
-                        <p class="grey">Jul 17, 2015 at 15 hours ago</p>
-                    </div>
+                <div class="accordionButton divisionLine">
+                    <h3><i class="fa-solid fa-angle-down"></i> 02 Comments</h3>
                 </div>
-                <div class="divComment">
-                    <div class="imageContainer">
-                        <img src="./assets/blog-7.jpeg" alt="Portrait image for Jenifer Loopz.">
+                <div class="accordion-container accordion-container-visible">
+                    <div class="divComment">
+                        <div class="imageContainer">
+                            <img src="./assets/blog-6.jpeg" alt="Portrait image for Daniel Vandaft.">
+                        </div>
+                        <div class="textContainer">
+                            <h4>Daniel Vandaft - <span class="italic grey">Reply</span></h4>
+                            <p>Ecosystem iPad disruptive social media low hanging fruit stealth launch party handshake market branding.</p>
+                            <p class="grey">Jul 17, 2015 at 15 hours ago</p>
+                        </div>
                     </div>
-                    <div class="textContainer">
-                        <h4>Jenifer Loopz - <span class="italic grey">Reply</span></h4>
-                        <p>Pitch agile development business plan stealth channels prototype mass market product management value proposition startup strategy.</p>
-                        <p class="grey">Jul 17, 2015 at 15 hours ago</p>
+                    <div class="divComment">
+                        <div class="imageContainer">
+                            <img src="./assets/blog-7.jpeg" alt="Portrait image for Jenifer Loopz.">
+                        </div>
+                        <div class="textContainer">
+                            <h4>Jenifer Loopz - <span class="italic grey">Reply</span></h4>
+                            <p>Pitch agile development business plan stealth channels prototype mass market product management value proposition startup strategy.</p>
+                            <p class="grey">Jul 17, 2015 at 15 hours ago</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="sectionLargeForm">
-                <h3>Leave a Comment</h3>
-                <div class="divisionLine"></div>
-                <form action="POST">
+                <div class="accordionButton divisionLine">
+                    <h3><i class="fa-solid fa-angle-down"></i> Leave a Comment</h3>
+                </div>
+                <form action="POST" class="accordion-container accordion-container-visible">
                     <label for="name" class="sr-only">Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name..." required>
 
@@ -285,6 +290,8 @@
             <h4>Creative Agency</h4>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

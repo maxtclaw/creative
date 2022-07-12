@@ -237,10 +237,10 @@ html {
 }
 
 * {
-  -webkit-transition-property: background-color, width, height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
-  transition-property: background-color, width, height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
-  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, gap, font-size;
-  transition-property: background-color, filter, transform, width, height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
+  -webkit-transition-property: background-color, width, height, max-height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
+  transition-property: background-color, width, height, max-height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
+  transition-property: background-color, filter, transform, width, height, max-height, border, top, left, padding, margin, gap, font-size;
+  transition-property: background-color, filter, transform, width, height, max-height, border, top, left, padding, margin, gap, font-size, -webkit-filter, -webkit-transform;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -1494,6 +1494,7 @@ main.blog h3 {
   display: inline-block;
   font-size: 1.1rem;
   font-weight: bold;
+  padding-top: 12px;
   padding-bottom: 12px;
 }
 main.blog section.sectionPost .blogInfo {
@@ -1921,4 +1922,17 @@ main.contact section.sectionLargeForm .imageContainer {
 main.contact section.sectionLargeForm img:hover {
   -webkit-transform: none;
           transform: none;
+}
+
+.accordionButton {
+  display: block;
+  width: 100%;
+}
+.accordionButton:hover {
+  background-color: #F6F6F6;
+}
+
+.accordion-container {
+  overflow: hidden;
+  max-height: 100vh;
 }
